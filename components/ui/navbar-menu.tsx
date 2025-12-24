@@ -9,7 +9,7 @@ const transition = {
   stiffness: 100,
   restDelta: 0.001,
   restSpeed: 0.001,
-};
+} as const; // Yahan 'as const' add kiya hai error fix karne ke liye
 
 export const MenuItem = ({
   setActive,

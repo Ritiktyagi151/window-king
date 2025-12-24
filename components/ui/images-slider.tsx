@@ -1,6 +1,6 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { motion, AnimatePresence } from "framer-motion"; // 'motion/react' ki jagah 'framer-motion' use karein
+import { motion, AnimatePresence, Variants } from "framer-motion"; // Variants import kiya
 import React, { useEffect, useState, useCallback } from "react";
 
 export const ImagesSlider = ({
@@ -78,8 +78,8 @@ export const ImagesSlider = ({
     };
   }, [handleNext, handlePrevious, autoplay]);
 
-  // Variants ko fix kiya (Scale 0 se 1 ki jagah opacity focus kiya)
-  const slideVariants = {
+  // Variants ko fix kiya (Explicitly typed as Variants)
+  const slideVariants: Variants = {
     initial: {
       opacity: 0,
       scale: 1.1, // Halka bada ho kar start hoga
@@ -106,7 +106,7 @@ export const ImagesSlider = ({
   return (
     <div
       className={cn(
-        "overflow-hidden h-full w-full relative flex items-center justify-center bg-slate-950", // Fallback background
+        "overflow-hidden h-full w-full relative flex items-center justify-center bg-slate-950",
         className
       )}
     >

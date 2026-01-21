@@ -75,7 +75,7 @@ export default function Navbar() {
             </MenuItem>
 
             <MenuItem setActive={setActive} active={active} item="Products">
-              <div className="text-sm grid grid-cols-2 gap-10 p-4 w-[550px]">
+              <div className="text-sm grid grid-cols-2 gap-10 p-4 w-[1200px]">
                 <ProductItem
                   title="uPVC Windows"
                   href="/products/upvc"

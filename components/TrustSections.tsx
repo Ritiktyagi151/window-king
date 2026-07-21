@@ -43,19 +43,19 @@ export default function TrustSections() {
     <div className="bg-white overflow-hidden">
       
       {/* --- SECTION 1: AWARDS & ACCREDITATIONS --- */}
-      <section className="py-20 max-w-7xl mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-center mb-12 gap-4">
+      <section className="mx-auto max-w-7xl px-4 py-14 md:py-20">
+        <div className="mb-10 flex flex-col items-start justify-between gap-4 md:mb-12 md:flex-row md:items-center">
           <motion.h2 
             initial={{ x: -50, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
-            className="text-4xl md:text-5xl font-black text-[#362A71] uppercase tracking-tighter"
+            className="text-3xl font-black uppercase tracking-tighter text-[#362A71] sm:text-4xl md:text-5xl"
           >
             Awards & <span className="text-[#F85A21]">Accreditations</span>
           </motion.h2>
           <motion.button 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-[#362A71] text-white px-8 py-3 rounded-full font-bold flex items-center gap-2 hover:bg-[#F85A21] transition-all"
+            className="flex items-center gap-2 rounded-full bg-[#362A71] px-8 py-3 font-bold text-white transition-all hover:bg-[#F85A21]"
           >
             READ ALL <ArrowRight size={20} />
           </motion.button>
@@ -69,12 +69,12 @@ export default function TrustSections() {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.2 }}
               whileHover={{ y: -10 }}
-              className="relative p-8 bg-gray-50 rounded-2xl border-b-4 border-transparent hover:border-[#F85A21] hover:shadow-2xl transition-all duration-300 group"
+              className="group relative rounded-2xl border-b-4 border-transparent bg-gray-50 p-6 transition-all duration-300 hover:border-[#F85A21] hover:shadow-2xl md:p-8"
             >
               <div className="absolute top-4 right-6 opacity-20 group-hover:opacity-100 transition-opacity">
                 {award.icon}
               </div>
-              <div className="flex items-center gap-6">
+              <div className="flex flex-col gap-5 sm:flex-row sm:items-center sm:gap-6">
                 <div className="w-24 h-24 bg-white p-2 rounded-xl shadow-inner flex items-center justify-center">
                   <img src={award.img} alt={award.title} className="max-w-full h-auto grayscale group-hover:grayscale-0 transition-all" />
                 </div>
@@ -93,9 +93,9 @@ export default function TrustSections() {
         {/* Background Decorative Element */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32 blur-3xl"></div>
         
-        <div className="max-w-7xl mx-auto px-4 mb-12 flex justify-between items-end">
+        <div className="mx-auto mb-12 flex max-w-7xl flex-col items-start justify-between gap-5 px-4 sm:flex-row sm:items-end">
           <div className="text-white">
-            <h2 className="text-4xl font-black uppercase tracking-tighter">Our <span className="text-[#F85A21]">Clientele</span></h2>
+            <h2 className="text-3xl font-black uppercase tracking-tighter sm:text-4xl">Our <span className="text-[#F85A21]">Clientele</span></h2>
             <p className="text-gray-300 mt-2">Trusted by India's leading institutions and corporations.</p>
           </div>
           <button className="text-[#F85A21] border-2 border-[#F85A21] px-6 py-2 rounded-full font-bold hover:bg-[#F85A21] hover:text-white transition-all text-sm">

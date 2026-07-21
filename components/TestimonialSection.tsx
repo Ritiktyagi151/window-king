@@ -49,11 +49,11 @@ export default function TestimonialSection() {
   };
 
   return (
-    <section className="w-full py-24 bg-white overflow-hidden">
+    <section className="w-full overflow-hidden bg-white py-14 md:py-24">
       <div className="max-w-6xl mx-auto px-6">
         
         {/* Header */}
-        <div className="text-center mb-16 flex flex-col items-center">
+        <div className="mb-10 flex flex-col items-center text-center md:mb-16">
           <motion.span 
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -61,20 +61,20 @@ export default function TestimonialSection() {
           >
             Voice of Customers
           </motion.span>
-          <h2 className="text-4xl md:text-5xl font-black text-[#362A71] mt-2 uppercase">
+          <h2 className="mt-2 text-3xl font-black uppercase text-[#362A71] sm:text-4xl md:text-5xl">
             TRUSTED BY <span className="text-gray-400">THOUSANDS</span>
           </h2>
         </div>
 
         {/* Main Slider Container */}
-        <div className="relative bg-[#362A71] rounded-[3rem] p-8 md:p-16 shadow-2xl overflow-hidden border-b-[10px] border-[#F85A21]">
+        <div className="relative overflow-hidden rounded-2xl border-b-[10px] border-[#F85A21] bg-[#362A71] p-6 pb-24 shadow-2xl md:rounded-[3rem] md:p-16">
           
           <Quote className="absolute top-10 left-10 text-white/5 w-40 h-40 -rotate-12" />
 
-          <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div className="relative z-10 grid grid-cols-1 items-center gap-8 md:grid-cols-2 md:gap-12">
             
             {/* Left Side: Animated Image (Aceternity Style) */}
-            <div className="relative h-80 w-full flex justify-center items-center">
+            <div className="relative flex h-64 w-full items-center justify-center sm:h-80">
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={index}
@@ -88,7 +88,7 @@ export default function TestimonialSection() {
                             <img 
                                 src={testimonials[index].src} 
                                 alt={testimonials[index].name} 
-                                className="h-64 w-64 md:h-72 md:w-72 object-cover rounded-[2rem] shadow-2xl shadow-black/50"
+                                className="h-52 w-52 rounded-2xl object-cover shadow-2xl shadow-black/50 sm:h-64 sm:w-64 md:h-72 md:w-72 md:rounded-[2rem]"
                             />
                         </div>
                     </motion.div>
@@ -96,7 +96,7 @@ export default function TestimonialSection() {
             </div>
 
             {/* Right Side: Content */}
-            <div className="flex flex-col justify-center text-left">
+            <div className="flex flex-col justify-center text-center md:text-left">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={index}
@@ -106,7 +106,7 @@ export default function TestimonialSection() {
                   transition={{ duration: 0.4 }}
                 >
                   {/* Rating */}
-                  <div className="flex gap-1 mb-6">
+                  <div className="mb-6 flex justify-center gap-1 md:justify-start">
                     {[...Array(5)].map((_, i) => (
                       <Star 
                         key={i} 
@@ -117,12 +117,12 @@ export default function TestimonialSection() {
                   </div>
 
                   {/* Content */}
-                  <p className="text-white text-xl md:text-2xl font-medium leading-relaxed italic mb-8">
+                  <p className="mb-8 text-base font-medium italic leading-relaxed text-white sm:text-xl md:text-2xl">
                     "{testimonials[index].content}"
                   </p>
 
                   {/* Profile */}
-                  <div className="border-l-4 border-[#F85A21] pl-6">
+                  <div className="border-[#F85A21] md:border-l-4 md:pl-6">
                     <h4 className="text-white text-2xl font-black uppercase tracking-tight">
                       {testimonials[index].name}
                     </h4>
@@ -136,7 +136,7 @@ export default function TestimonialSection() {
           </div>
 
           {/* Navigation Controls */}
-          <div className="absolute bottom-8 right-10 flex gap-4">
+          <div className="absolute bottom-6 left-1/2 flex -translate-x-1/2 gap-4 md:left-auto md:right-10 md:translate-x-0">
             <button 
               onClick={prevStep}
               className="p-4 rounded-full bg-white/5 text-white hover:bg-[#F85A21] transition-all border border-white/10 group"

@@ -11,6 +11,11 @@ export const metadata: Metadata = {
   },
   description: "Window King provides high-quality window installation, repair, and premium glass solutions for modern homes.",
   keywords: ["window installation", "window repair", "glass solutions", "Window King"],
+  icons: {
+    icon: "/window-king-logo.png",
+    shortcut: "/window-king-logo.png",
+    apple: "/window-king-logo.png",
+  },
   openGraph: {
     title: "Window King",
     description: "Premium Window Solutions for Modern Homes",

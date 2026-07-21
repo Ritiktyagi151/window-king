@@ -44,21 +44,21 @@ export default function BlogSection() {
   const sidePosts = blogs.filter((b) => !b.isFeatured);
 
   return (
-    <section className="py-20 bg-[#F5F7FA]">
+    <section className="bg-[#F5F7FA] py-14 md:py-20">
       <div className="max-w-7xl mx-auto px-4">
         
         {/* Header Section */}
-        <div className="flex justify-between items-center mb-10">
+        <div className="mb-10 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
           <motion.h2 
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
-            className="text-5xl font-black text-[#362A71] uppercase tracking-tighter"
+            className="text-3xl font-black uppercase tracking-tighter text-[#362A71] sm:text-4xl md:text-5xl"
           >
             Latest <span className="text-[#F85A21]">Blogs</span>
           </motion.h2>
           <motion.button 
             whileHover={{ scale: 1.05 }}
-            className="bg-[#009EDB] text-white px-6 py-2 rounded font-bold text-sm uppercase transition-colors hover:bg-[#362A71]"
+            className="rounded bg-[#009EDB] px-6 py-2 text-sm font-bold uppercase text-white transition-colors hover:bg-[#362A71]"
           >
             Read All
           </motion.button>
@@ -72,7 +72,7 @@ export default function BlogSection() {
             whileInView={{ opacity: 1, y: 0 }}
             className="lg:col-span-5 bg-white rounded-xl border border-blue-100 overflow-hidden shadow-sm flex flex-col"
           >
-            <div className="h-64 overflow-hidden">
+            <div className="h-56 overflow-hidden sm:h-64">
                <motion.img 
                 whileHover={{ scale: 1.05 }}
                 transition={{ duration: 0.5 }}
@@ -81,11 +81,11 @@ export default function BlogSection() {
                 alt="blog" 
                />
             </div>
-            <div className="p-8 flex flex-col flex-grow">
+            <div className="flex flex-grow flex-col p-6 md:p-8">
               <div className="flex items-center gap-2 text-gray-400 text-sm mb-4">
                 <Calendar size={16} /> {featuredPost?.date}
               </div>
-              <h3 className="text-2xl font-bold text-[#362A71] mb-4 leading-tight">
+              <h3 className="mb-4 text-xl font-bold leading-tight text-[#362A71] md:text-2xl">
                 {featuredPost?.title}
               </h3>
               <p className="text-gray-600 mb-8 flex-grow">

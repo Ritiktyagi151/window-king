@@ -7,7 +7,7 @@ export default function Showcase() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <section className="relative w-full h-[85vh] flex items-center overflow-hidden">
+    <section className="relative flex min-h-[620px] w-full items-center overflow-hidden py-20 md:h-[85vh] md:min-h-0 md:py-0">
       
       {/* BACKGROUND IMAGE - Aap yahan apni manual image ka path dal sakte hain */}
       <div 
@@ -34,7 +34,7 @@ export default function Showcase() {
               initial={{ opacity: 0, y: 10 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-[#F85A21] font-bold tracking-[0.4em] uppercase text-sm border-l-4 border-[#F85A21] pl-4"
+            className="border-l-4 border-[#F85A21] pl-4 text-xs font-bold uppercase tracking-[0.3em] text-[#F85A21] sm:text-sm sm:tracking-[0.4em]"
             >
               Window King Experience
             </motion.span>
@@ -43,7 +43,7 @@ export default function Showcase() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4 }}
-              className="text-5xl md:text-7xl font-black text-white leading-[1.1] uppercase"
+              className="text-4xl font-black uppercase leading-[1.1] text-white sm:text-5xl md:text-7xl"
             >
               Virtual <br /> 
               <span className="text-[#F85A21]">Showroom</span> <br />
@@ -54,7 +54,7 @@ export default function Showcase() {
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ delay: 0.6 }}
-              className="text-gray-200 text-lg leading-relaxed max-w-md"
+              className="max-w-md text-base leading-relaxed text-gray-200 md:text-lg"
             >
               Hamare exclusive designs ko 360 degree mein dekhein. Bina kahin jaye, apne ghar ke liye best windows choose karein.
             </motion.p>
@@ -68,7 +68,7 @@ export default function Showcase() {
               {/* 360 Trigger Button */}
               <button 
                 onClick={() => setIsOpen(true)}
-                className="bg-[#F85A21] text-white px-10 py-4 rounded-full font-black flex items-center gap-4 hover:bg-white hover:text-[#362A71] transition-all shadow-2xl group"
+                className="group flex w-full items-center justify-center gap-4 rounded-full bg-[#F85A21] px-8 py-4 font-black text-white shadow-2xl transition-all hover:bg-white hover:text-[#362A71] sm:w-auto sm:px-10"
               >
                 START 360° TOUR 
                 <div className="bg-white/20 p-1 rounded-full group-hover:bg-[#362A71]/10">
@@ -98,20 +98,20 @@ export default function Showcase() {
               initial={{ scale: 0.9, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               exit={{ scale: 0.9, opacity: 0 }}
-              className="relative w-full max-w-6xl h-[75vh] md:h-[85vh] bg-black rounded-[2.5rem] overflow-hidden shadow-2xl z-10 border-4 border-white/10"
+              className="relative z-10 h-[78vh] w-full max-w-6xl overflow-hidden rounded-2xl border-4 border-white/10 bg-black shadow-2xl md:h-[85vh] md:rounded-[2.5rem]"
             >
               {/* Close Button */}
               <button 
                 onClick={() => setIsOpen(false)}
-                className="absolute top-6 right-6 z-20 bg-[#F85A21] text-white p-3 rounded-full shadow-xl hover:scale-110 transition-transform"
+                className="absolute right-4 top-4 z-20 rounded-full bg-[#F85A21] p-3 text-white shadow-xl transition-transform hover:scale-110 md:right-6 md:top-6"
               >
                 <X size={24} />
               </button>
 
               {/* Instruction Label */}
-              <div className="absolute top-6 left-6 z-20 bg-black/50 backdrop-blur-md px-5 py-2 rounded-full border border-white/20">
-                <p className="text-white font-bold text-xs uppercase tracking-widest flex items-center gap-3">
-                  <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+              <div className="absolute left-4 right-16 top-4 z-20 rounded-full border border-white/20 bg-black/50 px-4 py-2 backdrop-blur-md md:left-6 md:right-auto md:top-6 md:px-5">
+                <p className="flex items-center gap-3 text-[10px] font-bold uppercase tracking-widest text-white sm:text-xs">
+                  <span className="h-2 w-2 shrink-0 animate-pulse rounded-full bg-green-500" />
                   Live 360 View: Use Mouse to Rotate
                 </p>
               </div>

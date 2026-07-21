@@ -49,7 +49,7 @@ export default function TrustSection() {
   }, [features]);
 
   return (
-    <section className="w-full bg-[#fcfcfc] md:min-h-[80vh] flex items-center overflow-hidden py-12 mb-20">
+    <section className="mb-12 flex w-full items-center overflow-hidden bg-[#fcfcfc] py-12 md:mb-20 md:min-h-[80vh]">
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative">
         
         <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-8 relative z-10">
@@ -62,7 +62,7 @@ export default function TrustSection() {
             transition={{ duration: 0.8 }}
             viewport={{ once: false, amount: 0.3 }}
           >
-            <div className="relative w-full max-w-[500px] bg-white p-8 md:p-12 rounded-[3rem] border border-gray-100 shadow-xl">
+            <div className="relative w-full max-w-[500px] rounded-2xl border border-gray-100 bg-white p-5 shadow-xl md:rounded-[3rem] md:p-12">
               
               {/* Dynamic Image with Animation */}
               <div className="relative h-[250px] md:h-[350px] w-full">
@@ -100,7 +100,7 @@ export default function TrustSection() {
 
           {/* Right Side: Interactive List */}
           <motion.div 
-            className="w-full lg:w-1/2 bg-white border border-gray-100 p-8 md:p-6 flex flex-col justify-center rounded-[2.5rem] shadow-2xl z-10"
+            className="z-10 flex w-full flex-col justify-center rounded-2xl border border-gray-100 bg-white p-6 shadow-2xl md:rounded-[2.5rem] lg:w-1/2"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -110,7 +110,7 @@ export default function TrustSection() {
               Safety First
             </span>
             
-            <h2 className="text-3xl md:text-5xl flex flex-wrap gap-x-3 items-center font-black mb-6 text-[#362A71] leading-tight">
+            <h2 className="mb-6 flex flex-wrap items-center gap-x-3 text-3xl font-black leading-tight text-[#362A71] sm:text-4xl md:text-5xl">
               Safety 
               <span className="text-gray-400 font-light italic text-2xl md:text-3xl">Worth Your Trust</span>
             </h2>
@@ -125,7 +125,7 @@ export default function TrustSection() {
                   }}
                   className={`flex items-center gap-4 p-3 rounded-xl cursor-pointer transition-all duration-300 border ${
                     activeIndex === i 
-                    ? "bg-[#F85A21]/5 border-[#F85A21]/30 translate-x-2 shadow-sm" 
+                    ? "bg-[#F85A21]/5 border-[#F85A21]/30 md:translate-x-2 shadow-sm" 
                     : "bg-transparent border-transparent hover:bg-gray-50"
                   }`}
                 >

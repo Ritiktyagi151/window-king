@@ -57,19 +57,19 @@ export default function ServiceHub() {
   ];
 
   return (
-    <section className="relative w-full py-24 bg-[#0a0a0a] overflow-hidden">
+    <section className="relative w-full overflow-hidden bg-[#0a0a0a] py-14 md:py-24">
       {/* Background Text */}
       <div className="absolute top-10 left-10 text-[10rem] font-black text-white/[0.02] select-none pointer-events-none hidden md:block">
         SERVICES
       </div>
 
-      <div className="max-w-7xl mx-auto px-6 relative z-10">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="mb-8 text-center md:mb-12">
           <motion.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
-            className="text-[#F85A21] font-bold tracking-[0.4em] uppercase text-sm"
+            className="text-xs font-bold uppercase tracking-[0.3em] text-[#F85A21] sm:text-sm sm:tracking-[0.4em]"
           >
             Our Commitment
           </motion.span>
@@ -77,7 +77,7 @@ export default function ServiceHub() {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="text-4xl md:text-6xl font-black text-white mt-4 uppercase"
+            className="mt-4 text-3xl font-black uppercase text-white sm:text-4xl md:text-6xl"
           >
             Why Choose <span className="text-[#F85A21]">Window King?</span>
           </motion.h2>
@@ -116,7 +116,7 @@ export default function ServiceHub() {
           transition={{ delay: 0.5 }}
           className="mt-10 text-center"
         >
-          <button className="px-12 py-4 bg-[#F85A21] text-white font-black rounded-xl hover:bg-white hover:text-[#362A71] transition-all shadow-xl">
+          <button className="w-full rounded-xl bg-[#F85A21] px-8 py-4 font-black text-white shadow-xl transition-all hover:bg-white hover:text-[#362A71] sm:w-auto sm:px-12">
             KNOW MORE ABOUT US
           </button>
         </motion.div>

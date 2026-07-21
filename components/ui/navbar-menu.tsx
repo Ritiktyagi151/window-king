@@ -27,7 +27,7 @@ export const MenuItem = ({
       <motion.p
         transition={{ duration: 0.3 }}
         // Black color hatakar Purple (#362A71) kiya aur font-bold badha di
-        className="cursor-pointer text-[#362A71] font-bold hover:text-[#F85A21] transition-colors duration-200"
+        className="cursor-pointer whitespace-nowrap text-[#362A71] font-bold hover:text-[#F85A21] transition-colors duration-200"
       >
         {item}
       </motion.p>
@@ -39,16 +39,16 @@ export const MenuItem = ({
         >
           {active === item && (
             // Spacing badhane ke liye top value badhai hai
-            <div className="absolute top-[calc(100%_+_1.5rem)] left-1/2 transform -translate-x-1/2 pt-4">
+            <div className="absolute top-[calc(100%_+_1rem)] left-1/2 transform -translate-x-1/2 pt-4">
               <motion.div
                 transition={transition}
                 layoutId="active"
                 // Dark mode logic (dark:bg-black) hatakar pure white aur subtle gray border rakha hai
-                className="bg-white backdrop-blur-md rounded-2xl overflow-hidden border border-gray-100 shadow-[0px_20px_50px_rgba(54,42,113,0.15)]"
+                className="max-w-[calc(100vw-2rem)] overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-[0px_20px_50px_rgba(54,42,113,0.15)] backdrop-blur-md"
               >
                 <motion.div
                   layout
-                  className="w-max h-full p-6" // Padding 4 se badhakar 6 ki hai (Extra Space)
+                  className="h-full w-max max-w-[calc(100vw-2rem)] p-4 lg:p-6"
                 >
                   {children}
                 </motion.div>
@@ -72,7 +72,7 @@ export const Menu = ({
     <nav
       onMouseLeave={() => setActive(null)}
       // Navbar ka background white aur border halke purple-tint mein rakha hai
-      className="relative rounded-full border border-gray-50 bg-white/80 backdrop-blur-md shadow-lg flex justify-center space-x-8 px-10 py-5 transition-all duration-300" 
+      className="relative flex items-center justify-center space-x-4 rounded-full border border-gray-50 bg-white/80 px-6 py-4 shadow-lg backdrop-blur-md transition-all duration-300 2xl:space-x-8 2xl:px-10 2xl:py-5"
     >
       {children}
     </nav>
@@ -91,13 +91,13 @@ export const ProductItem = ({
   src: string;
 }) => {
   return (
-    <a href={href} className="flex space-x-4 group p-2 rounded-lg hover:bg-gray-50 transition-all">
+    <a href={href} className="group flex gap-4 rounded-lg p-2 transition-all hover:bg-gray-50">
       <img
         src={src}
         width={140}
         height={70}
         alt={title}
-        className="shrink-0 rounded-xl shadow-md group-hover:shadow-xl transition-shadow duration-300"
+        className="h-[70px] w-[120px] shrink-0 rounded-xl object-cover shadow-md transition-shadow duration-300 group-hover:shadow-xl sm:w-[140px]"
       />
       <div>
         {/* Title ko brand purple kiya */}

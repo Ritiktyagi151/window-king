@@ -15,9 +15,9 @@ export default function BrandStory() {
   ];
 
   return (
-    <section className="relative py-24 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section className="relative overflow-hidden bg-white py-14 md:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-16">
           
           {/* Left Side: Content */}
           <motion.div 
@@ -25,13 +25,13 @@ export default function BrandStory() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <p className="text-[#F85A21] font-bold tracking-[0.3em] uppercase text-sm mb-4">
+            <p className="mb-4 text-xs font-bold uppercase tracking-[0.25em] text-[#F85A21] sm:text-sm sm:tracking-[0.3em]">
               Premium Manufacturer & Trader
             </p>
             
             <TypewriterEffectSmooth className="bg-amber-300" words={words} />
 
-            <div className="mt-8 space-y-6 text-gray-700 text-lg leading-relaxed">
+            <div className="mt-8 space-y-6 text-base leading-relaxed text-gray-700 md:text-lg">
               <p>
                 We, <span className="text-[#362A71] font-bold">"Window King Private Limited"</span> are a premier 
                 Manufacturer, Wholesaler, and Trader of high-quality 
@@ -46,7 +46,7 @@ export default function BrandStory() {
               {/* Mentor Highlight Card */}
               <motion.div 
                 whileHover={{ scale: 1.02 }}
-                className="bg-gray-50 p-6 rounded-2xl border-l-8 border-[#362A71] shadow-sm mt-10"
+                className="mt-10 rounded-2xl border-l-4 border-[#362A71] bg-gray-50 p-5 shadow-sm md:border-l-8 md:p-6"
               >
                 <p className="text-sm uppercase tracking-widest text-[#F85A21] font-bold mb-2">Our Visionary Mentor</p>
                 <h3 className="text-2xl font-black text-[#362A71] mb-2">MR. RAJESH PARIDA</h3>
@@ -59,7 +59,7 @@ export default function BrandStory() {
           </motion.div>
 
           {/* Right Side: Animated Feature Grid */}
-          <div className="grid grid-cols-2 gap-4 relative">
+          <div className="relative grid grid-cols-1 gap-4 sm:grid-cols-2">
             {/* Background Glow */}
             <div className="absolute inset-0 bg-[#362A71]/5 blur-[100px] rounded-full"></div>
             
@@ -103,7 +103,7 @@ function FeatureCard({ icon, title, desc, color, delay }: any) {
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ delay }}
       whileHover={{ y: -10 }}
-      className="p-6 rounded-3xl bg-white shadow-xl shadow-gray-100 border border-gray-50 flex flex-col gap-4"
+      className="flex flex-col gap-4 rounded-2xl border border-gray-50 bg-white p-5 shadow-xl shadow-gray-100 md:rounded-3xl md:p-6"
     >
       <div className={`w-12 h-12 ${color} rounded-2xl flex items-center justify-center shadow-lg`}>
         {icon}

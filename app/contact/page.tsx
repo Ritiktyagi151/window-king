@@ -55,7 +55,7 @@ const ContactPage = () => {
   if (!mounted) return <div className="min-h-screen bg-gray-50" />;
 
   return (
-    <div ref={containerRef} className="min-h-screen bg-[#f4f7f9] pt-40 pb-20 px-4 md:px-10 font-sans selection:bg-[#7c3aed] selection:text-white overflow-x-hidden">
+    <div ref={containerRef} className="min-h-screen overflow-x-hidden bg-[#f4f7f9] px-4 pb-16 pt-32 font-sans selection:bg-[#7c3aed] selection:text-white md:px-10 md:pb-20 md:pt-40">
       
       {/* Scroll Progress Bar */}
       <motion.div 
@@ -70,7 +70,7 @@ const ContactPage = () => {
           initial="hidden"
           animate="visible"
           variants={fadeInUp}
-          className="bg-white rounded-[30px] md:rounded-[60px] shadow-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 min-h-[750px] relative border border-gray-100"
+          className="relative grid min-h-0 grid-cols-1 overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-2xl md:rounded-[40px] lg:min-h-[750px] lg:grid-cols-2 xl:rounded-[60px]"
         >
           {/* LEFT SIDE: Image & Info Cards */}
           <div className="relative h-80 lg:h-auto overflow-hidden bg-gray-200">
@@ -102,7 +102,7 @@ const ContactPage = () => {
           </div>
 
           {/* RIGHT SIDE: Form Section */}
-          <div className="p-8 md:p-16 flex flex-col justify-center bg-white relative">
+          <div className="relative flex flex-col justify-center bg-white p-6 sm:p-8 md:p-12 xl:p-16">
             {/* Floating Brand Badge */}
             <div className="absolute -right-4 top-10 hidden lg:block z-30">
                <motion.div 
@@ -117,7 +117,7 @@ const ContactPage = () => {
             <AnimatePresence mode="wait">
               {!isSubmitted ? (
                 <motion.div key="form" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
-                  <h2 className="text-4xl md:text-5xl font-black text-gray-900 mb-2 tracking-tighter">Contact <span className="text-purple-600 italic">Us</span></h2>
+                  <h2 className="mb-2 text-4xl font-black tracking-tighter text-gray-900 md:text-5xl">Contact <span className="text-purple-600 italic">Us</span></h2>
                   <p className="text-gray-400 mb-10 text-sm italic underline decoration-orange-500 underline-offset-4">Premium window solutions are just a message away.</p>
 
                   <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -173,9 +173,9 @@ const ContactPage = () => {
           whileInView="visible"
           viewport={{ once: true, amount: 0.2 }}
           variants={fadeInUp}
-          className="mt-32 bg-white rounded-[50px] overflow-hidden shadow-2xl flex flex-col md:flex-row border border-gray-100"
+          className="mt-16 flex flex-col overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-2xl md:mt-32 md:flex-row md:rounded-[50px]"
         >
-          <div className="p-12 md:p-20 flex flex-col justify-center bg-white md:w-1/3">
+          <div className="flex flex-col justify-center bg-white p-8 md:w-1/3 md:p-12 xl:p-20">
             <h2 className="text-4xl font-black text-gray-900 mb-6 italic">Our <span className="text-orange-500">Showroom</span></h2>
             <p className="text-gray-500 mb-10 leading-relaxed text-sm">Experience premium quality in person. Visit our Delhi hub for a free consultation.</p>
             <div className="flex items-start gap-4 text-purple-600">
@@ -186,7 +186,7 @@ const ContactPage = () => {
               Get Directions <ExternalLink size={16} />
             </button>
           </div>
-          <div className="md:w-2/3 h-[450px]">
+          <div className="h-[320px] md:h-[450px] md:w-2/3">
             <iframe 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112134.425946114!2d77.100985!3d28.563065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3970725359b%3A0xd680327f12e8736a!2sOkhla%20Industrial%20Estate%2C%20New%20Delhi!5e0!3m2!1sen!2sin!4v1642250000000" 
               className="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-700" 
@@ -196,7 +196,7 @@ const ContactPage = () => {
         </motion.div>
 
         {/* SECTION 3: TRUST CARDS */}
-        <div className="mt-32 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="mt-16 grid grid-cols-1 gap-8 md:mt-32 md:grid-cols-3">
           {[
             { id: 't1', icon: ShieldCheck, title: "10 Year Warranty", color: "text-purple-600" },
             { id: 't2', icon: Building2, title: "Expert Installation", color: "text-orange-500" },
@@ -205,7 +205,7 @@ const ContactPage = () => {
             <motion.div 
               key={card.id}
               whileHover={{ y: -10 }}
-              className="bg-white p-12 rounded-[40px] border border-gray-100 shadow-sm text-center md:text-left group"
+              className="group rounded-2xl border border-gray-100 bg-white p-8 text-center shadow-sm md:rounded-[40px] md:p-12 md:text-left"
             >
               <card.icon size={40} className={`${card.color} mb-6 mx-auto md:mx-0 group-hover:scale-110 transition-transform`} />
               <h4 className="text-2xl font-black text-gray-900 mb-4 tracking-tighter">{card.title}</h4>

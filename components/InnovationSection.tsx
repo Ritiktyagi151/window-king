@@ -10,48 +10,48 @@ export default function InnovationSection() {
       desc: "Built to withstand extreme heat, heavy rain, and UV rays.",
       img: "https://www.shutterstock.com/shutterstock/photos/2695866349/display_1500/stock-photo-french-aluminum-windows-in-the-house-outside-the-window-winter-2695866349.jpg",
       // Desktop par ye box bada dikhega
-      size: "md:col-span-2 md:row-span-2 h-[400px] md:h-full", 
+      size: "h-[300px] sm:h-[360px] md:col-span-2 md:row-span-2 md:h-full", 
     },
     {
       title: "Rain Track System",
       desc: "Patented design for zero water seepage.",
       img: "https://www.shutterstock.com/shutterstock/photos/2574710117/display_1500/stock-photo-studio-shot-photo-of-cheap-car-on-rainy-track-at-night-with-wind-storm-chaos-with-close-on-wet-glass-2574710117.jpg",
-      size: "md:col-span-2 md:row-span-1 h-[250px] md:h-full",
+      size: "h-[230px] md:col-span-2 md:row-span-1 md:h-full",
     },
     {
       title: "Hurricane Bar",
       desc: "Reinforced strength for high-wind zones.",
       img: "https://www.shutterstock.com/shutterstock/photos/2550825415/display_1500/stock-photo-boy-looking-out-the-window-while-there-is-a-hurricane-2550825415.jpg",
-      size: "md:col-span-1 md:row-span-1 h-[250px] md:h-full",
+      size: "h-[230px] md:col-span-1 md:row-span-1 md:h-full",
     },
     {
       title: "Fusion Joints",
       desc: "Perfectly welded corners for air-tight sealing.",
       img: "https://www.shutterstock.com/shutterstock/photos/2461974161/display_1500/stock-photo-fast-food-restaurant-with-drive-thru-photo-realistic-modern-architecture-stone-and-light-yellow-2461974161.jpg",
-      size: "md:col-span-1 md:row-span-1 h-[250px] md:h-full",
+      size: "h-[230px] md:col-span-1 md:row-span-1 md:h-full",
     },
   ];
 
   return (
-    <section className="w-full bg-white py-16 md:h-[85vh] flex flex-col justify-center overflow-hidden">
+    <section className="flex w-full flex-col justify-center overflow-hidden bg-white py-14 md:min-h-[85vh] md:py-16">
       <div className="max-w-7xl mx-auto px-6 w-full h-full flex flex-col">
         
         {/* Header */}
-        <div className="flex flex-col md:flex-row justify-between items-end mb-8 gap-4 shrink-0">
+        <div className="mb-8 flex shrink-0 flex-col items-start justify-between gap-4 md:flex-row md:items-end">
           <motion.div
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
             <span className="text-[#F85A21] font-bold tracking-[0.3em] uppercase text-xs md:text-sm">Engineered Excellence</span>
-            <h2 className="text-3xl md:text-5xl font-black text-[#362A71] uppercase leading-none mt-2">
+            <h2 className="mt-2 text-3xl font-black uppercase leading-tight text-[#362A71] sm:text-4xl md:text-5xl md:leading-none">
               Quality & <span className="text-gray-400">Innovations</span>
             </h2>
           </motion.div>
           
           <motion.button 
             whileHover={{ scale: 1.05 }}
-            className="group flex items-center gap-3 bg-[#362A71] text-white px-6 md:px-8 py-3 rounded-full font-bold text-xs md:text-sm transition-all hover:bg-[#F85A21]"
+            className="group flex w-full items-center justify-center gap-3 rounded-full bg-[#362A71] px-6 py-3 text-xs font-bold text-white transition-all hover:bg-[#F85A21] sm:w-auto md:px-8 md:text-sm"
           >
             EXPLORE TECHNOLOGY <MoveRight size={18} className="group-hover:translate-x-2 transition-transform" />
           </motion.button>

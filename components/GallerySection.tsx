@@ -20,20 +20,20 @@ const GallerySection = () => {
   ];
 
   const gridImages = [
-    { id: 1, url: "https://www.shutterstock.com/shutterstock/photos/2687378145/display_1500/stock-photo-outdoor-photo-of-a-luxurious-desert-home-nestles-gently-into-the-picturesque-rocky-desert-mountain-2687378145.jpg", size: "col-span-2 row-span-2", title: "Architectural Marvel" },
-    { id: 2, url: "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6", size: "col-span-1 row-span-1", title: "Interior Details" },
-    { id: 3, url: "https://images.unsplash.com/photo-1484154218962-a197022b5858", size: "col-span-1 row-span-1", title: "Minimalist Style" },
-    { id: 4, url: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a", size: "col-span-2 row-span-1", title: "Premium Finishes" },
+    { id: 1, url: "https://www.shutterstock.com/shutterstock/photos/2687378145/display_1500/stock-photo-outdoor-photo-of-a-luxurious-desert-home-nestles-gently-into-the-picturesque-rocky-desert-mountain-2687378145.jpg", size: "md:col-span-2 md:row-span-2", title: "Architectural Marvel" },
+    { id: 2, url: "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6", size: "", title: "Interior Details" },
+    { id: 3, url: "https://images.unsplash.com/photo-1484154218962-a197022b5858", size: "", title: "Minimalist Style" },
+    { id: 4, url: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a", size: "md:col-span-2", title: "Premium Finishes" },
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="bg-gray-50 py-14 md:py-20">
       <div className="max-w-7xl mx-auto px-4">
         
         {/* Header */}
-        <div className="flex justify-between items-end mb-12">
+        <div className="mb-10 flex flex-col items-start justify-between gap-4 md:mb-12 md:flex-row md:items-end">
           <div>
-            <h2 className="text-[#362A71] text-4xl font-black uppercase">Our Masterpieces</h2>
+            <h2 className="text-3xl font-black uppercase text-[#362A71] sm:text-4xl">Our Masterpieces</h2>
             <div className="h-1 w-20 bg-[#F85A21] mt-2"></div>
           </div>
           <p className="text-gray-500 max-w-md text-right hidden md:block">
@@ -49,7 +49,7 @@ const GallerySection = () => {
             navigation
             pagination={{ clickable: true }}
             autoplay={{ delay: 4000 }}
-            className="h-[500px] w-full"
+            className="h-[320px] w-full sm:h-[420px] md:h-[500px]"
           >
             {sliderImages.map((img, index) => (
               <SwiperSlide key={index}>
@@ -59,9 +59,9 @@ const GallerySection = () => {
                     <motion.div 
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
-                      className="text-center text-white"
+                      className="px-4 text-center text-white"
                     >
-                      <h3 className="text-5xl font-bold mb-4">{img.title}</h3>
+                      <h3 className="mb-4 text-3xl font-bold sm:text-4xl md:text-5xl">{img.title}</h3>
                       <button className="bg-[#F85A21] px-6 py-2 rounded-full font-bold flex items-center gap-2 mx-auto hover:bg-[#362A71] transition-colors">
                         View Project <ArrowRight size={18} />
                       </button>
@@ -74,7 +74,7 @@ const GallerySection = () => {
         </div>
 
         {/* --- PART 2: MASONRY GRID --- */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-[200px]">
+        <div className="grid grid-cols-1 gap-4 auto-rows-[220px] sm:grid-cols-2 md:grid-cols-4 md:auto-rows-[200px]">
           {gridImages.map((item) => (
             <motion.div
               key={item.id}

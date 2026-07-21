@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { 
   Facebook, Instagram, Twitter, Linkedin, Youtube, 
@@ -8,6 +9,11 @@ import {
 } from "lucide-react";
 
 export default function Footer() {
+  const footerLinks = [
+    { label: "Privacy Policy", href: "/privacy-policy" },
+    { label: "Terms", href: "/terms" },
+  ];
+
   const containerVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: {
@@ -41,12 +47,14 @@ export default function Footer() {
         {/* Column 1: Brand Identity */}
         <motion.div variants={itemVariants} className="space-y-6">
           <div className="group cursor-pointer">
-            <h2 className="text-3xl font-black tracking-tighter text-white transition-transform group-hover:scale-105 duration-300">
-              WINDOW KING<span className="text-[#F85A21] font-light">+</span>
-            </h2>
-            <p className="text-[#F85A21] text-[10px] font-bold uppercase tracking-[0.3em]">
-              Better by Design
-            </p>
+            <Link href="/" className="relative block h-20 w-28 transition-transform duration-300 group-hover:scale-105">
+              <Image
+                src="/images/logo/logo.jpeg"
+                alt="Window King Logo"
+                fill
+                className="object-contain object-left"
+              />
+            </Link>
           </div>
           
           <p className="text-gray-300 text-sm leading-relaxed max-w-sm">
@@ -75,7 +83,7 @@ export default function Footer() {
             <span className="absolute -bottom-2 left-0 w-12 h-1 bg-[#F85A21] rounded-full"></span>
           </h3>
           <ul className="space-y-4">
-            {['About Us', 'Our Products', 'Project Showcase', 'Find a Store', 'Contact Us'].map((item) => (
+            {['About Us', 'Our Products', 'Project Showcase', 'Contact Us'].map((item) => (
               <li key={item}>
                 <Link 
                   href={`/${item.toLowerCase().replace(/\s+/g, '-')}`} 
@@ -148,23 +156,27 @@ export default function Footer() {
       </motion.div>
 
       {/* Footer Bottom Bar */}
-      <div className="max-w-7xl mx-auto px-6 mt-20 pt-8 border-t border-white/5 relative z-10">
-        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-          <p className="text-[11px] text-gray-500 font-medium">
-            © 2025 <span className="text-gray-300">WINDOW KING PRIVATE LIMITED</span>. All Masterpieces Reserved.
+      <div className="relative z-10 mx-auto mt-14 max-w-7xl border-t border-white/5 px-6 pt-8 md:mt-20">
+        <div className="grid grid-cols-1 items-center gap-5 text-center lg:grid-cols-[1fr_auto_1fr]">
+          <p className="text-[11px] font-medium text-gray-500 lg:text-left">
+            &copy; 2025 <span className="text-gray-300">WINDOW KING PRIVATE LIMITED</span>. All Masterpieces Reserved.
           </p>
           
-          <div className="flex gap-8">
-            {['Privacy Policy', 'Terms', 'Sitemap'].map((link) => (
+          <div className="flex justify-center gap-8">
+            {footerLinks.map((link) => (
               <Link 
-                key={link} 
-                href="#" 
+                key={link.label} 
+                href={link.href} 
                 className="text-[11px] text-gray-500 hover:text-[#F85A21] uppercase tracking-widest transition-colors"
               >
-                {link}
+                {link.label}
               </Link>
             ))}
           </div>
+
+          <p className="text-[11px] font-medium text-gray-400 lg:text-right">
+            Designed & Developed by <span className="text-gray-300">Jaikvik Technology India Pvt. Ltd.</span>
+          </p>
         </div>
       </div>
     </footer>

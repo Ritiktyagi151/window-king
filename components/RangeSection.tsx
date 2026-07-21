@@ -7,7 +7,7 @@ export default function RangeSection() {
   const categories = ["Design", "Series", "Material", "Space"];
 
   return (
-    <section className="w-full bg-white md:h-[80vh] flex items-center overflow-hidden py-20 md:py-0 my-10">
+    <section className="my-8 flex w-full items-center overflow-hidden bg-white py-14 md:my-10 md:min-h-[80vh] md:py-20">
       <div className="max-w-7xl mx-auto px-4 md:px-6 relative w-full">
         
         {/* Decorative Text - Subtle Light Version */}
@@ -25,11 +25,11 @@ export default function RangeSection() {
             transition={{ duration: 0.8 }}
             viewport={{ once: false, amount: 0.3 }}
           >
-            <div className="overflow-hidden rounded-3xl shadow-xl bg-gray-50 p-2 md:p-4">
+            <div className="overflow-hidden rounded-2xl bg-gray-50 p-2 shadow-xl md:rounded-3xl md:p-4">
               <img 
                 src="/images/window.png" 
                 alt="Range" 
-                className="w-full h-[300px] md:h-[400px] lg:h-[480px] object-cover rounded-2xl transition-transform duration-700 group-hover:scale-105" 
+                className="h-[260px] w-full rounded-xl object-cover transition-transform duration-700 group-hover:scale-105 sm:h-[320px] md:h-[400px] md:rounded-2xl lg:h-[480px]" 
               />
             </div>
             <div className="absolute -bottom-4 -right-2 md:-bottom-6 md:-right-6 bg-[#F85A21] text-white p-5 md:p-8 rounded-2xl shadow-xl z-20">
@@ -40,7 +40,7 @@ export default function RangeSection() {
 
           {/* Left Side: Light Content Box */}
           <motion.div 
-            className="w-full lg:w-5/12 bg-white border border-gray-100 p-8 md:p-12 flex flex-col justify-center rounded-3xl lg:-mr-20 shadow-2xl z-10"
+            className="z-10 flex w-full flex-col justify-center rounded-2xl border border-gray-100 bg-white p-6 shadow-2xl md:rounded-3xl md:p-12 lg:-mr-20 lg:w-5/12"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -50,7 +50,7 @@ export default function RangeSection() {
               Premium Collection
             </span>
             
-            <h2 className="text-3xl md:text-5xl font-black mb-4 text-[#362A71] leading-tight">
+            <h2 className="mb-4 text-3xl font-black leading-tight text-[#362A71] sm:text-4xl md:text-5xl">
               Wide Range <br />
               <span className="text-gray-400 font-light italic text-2xl md:text-3xl tracking-tight">Windows & Doors</span>
             </h2>

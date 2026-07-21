@@ -49,7 +49,7 @@ export default function LocateUs() {
   ];
 
   return (
-    <section className="relative w-full py-20 overflow-hidden bg-white">
+    <section className="relative w-full overflow-hidden bg-white py-14 md:py-20">
       
       {/* Animated Floating Background Shapes */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -67,19 +67,19 @@ export default function LocateUs() {
         
         {/* Header Section */}
         <div className="flex flex-col lg:flex-row justify-between items-center mb-16 gap-8">
-          <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }}>
-            <h2 className="text-5xl md:text-6xl font-black text-[#362A71] uppercase leading-none">
+          <motion.div initial={{ opacity: 0, x: -30 }} whileInView={{ opacity: 1, x: 0 }} className="text-center lg:text-left">
+            <h2 className="text-4xl font-black uppercase leading-none text-[#362A71] sm:text-5xl md:text-6xl">
               Locate <span className="text-[#F85A21]">Us</span>
             </h2>
-            <div className="h-1.5 w-20 bg-[#F85A21] mt-4 rounded-full" />
+            <div className="mx-auto mt-4 h-1.5 w-20 rounded-full bg-[#F85A21] lg:mx-0" />
           </motion.div>
           
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="flex items-center gap-2 bg-[#F85A21] text-white px-8 py-3 rounded-xl font-bold text-sm shadow-xl hover:bg-[#362A71] transition-all">
+          <div className="flex w-full flex-col justify-center gap-3 sm:w-auto sm:flex-row sm:flex-wrap sm:gap-4">
+            <button className="flex w-full items-center justify-center gap-2 rounded-xl bg-[#F85A21] px-6 py-3 text-sm font-bold text-white shadow-xl transition-all hover:bg-[#362A71] sm:w-auto sm:px-8">
               <Globe size={18} /> VIRTUAL SHOWROOM
             </button>
             <div className="flex gap-2">
-              <select className="bg-white border border-gray-200 text-[#362A71] px-6 py-3 rounded-xl text-xs font-bold focus:outline-none shadow-sm">
+              <select className="w-full rounded-xl border border-gray-200 bg-white px-6 py-3 text-xs font-bold text-[#362A71] shadow-sm focus:outline-none sm:w-auto">
                 <option>Select City</option>
               </select>
             </div>
@@ -87,7 +87,7 @@ export default function LocateUs() {
         </div>
 
         {/* 9 Image Parallax Slider Area */}
-        <div className="relative w-full h-[400px] md:h-[500px] rounded-[3rem] overflow-hidden shadow-2xl mb-16 border-[12px] border-white">
+        <div className="relative mb-12 h-[320px] w-full overflow-hidden rounded-2xl border-8 border-white shadow-2xl sm:h-[400px] md:mb-16 md:h-[500px] md:rounded-[3rem] md:border-[12px]">
           <AnimatePresence mode="wait">
             <motion.div
               key={currentImg}
@@ -99,7 +99,7 @@ export default function LocateUs() {
             >
               {/* Image with Parallax Style */}
               <div 
-                className="w-full h-full bg-cover bg-center bg-fixed"
+                className="h-full w-full bg-cover bg-center md:bg-fixed"
                 style={{ backgroundImage: `url(${sliderImages[currentImg]})` }}
               />
             </motion.div>
@@ -109,21 +109,21 @@ export default function LocateUs() {
           <div className="absolute inset-0 bg-gradient-to-t from-[#362A71]/60 via-transparent to-black/10" />
           
           {/* Slider Controls */}
-          <div className="absolute bottom-10 left-0 right-0 px-10 flex justify-between items-center">
-             <div className="bg-white/10 backdrop-blur-md border border-white/20 text-white px-8 py-4 rounded-2xl font-black text-xl md:text-3xl shadow-2xl">
-                <span className="text-[#F85A21]">{currentImg + 1}</span> / 9 <span className="text-sm font-light ml-2 uppercase tracking-widest">Studios</span>
+          <div className="absolute bottom-6 left-0 right-0 flex items-center justify-between px-4 sm:px-6 md:bottom-10 md:px-10">
+             <div className="rounded-2xl border border-white/20 bg-white/10 px-4 py-3 text-xl font-black text-white shadow-2xl backdrop-blur-md md:px-8 md:py-4 md:text-3xl">
+                <span className="text-[#F85A21]">{currentImg + 1}</span> / 9 <span className="ml-2 hidden text-sm font-light uppercase tracking-widest sm:inline">Studios</span>
              </div>
              
              <div className="flex gap-3">
                 <button 
                   onClick={() => setCurrentImg((prev) => (prev - 1 + sliderImages.length) % sliderImages.length)}
-                  className="p-4 bg-white/20 backdrop-blur-md text-white rounded-full hover:bg-[#F85A21] transition-all"
+                  className="rounded-full bg-white/20 p-3 text-white backdrop-blur-md transition-all hover:bg-[#F85A21] md:p-4"
                 >
                   <ArrowLeft size={24} />
                 </button>
                 <button 
                   onClick={() => setCurrentImg((prev) => (prev + 1) % sliderImages.length)}
-                  className="p-4 bg-white/20 backdrop-blur-md text-white rounded-full hover:bg-[#F85A21] transition-all"
+                  className="rounded-full bg-white/20 p-3 text-white backdrop-blur-md transition-all hover:bg-[#F85A21] md:p-4"
                 >
                   <ArrowRight size={24} />
                 </button>
@@ -137,7 +137,7 @@ export default function LocateUs() {
             <motion.div 
               key={index}
               whileHover={{ y: -10 }}
-              className="bg-white/90 backdrop-blur-md border border-gray-100 p-10 rounded-[2.5rem] shadow-xl relative group"
+              className="group relative rounded-2xl border border-gray-100 bg-white/90 p-6 shadow-xl backdrop-blur-md md:rounded-[2.5rem] md:p-10"
             >
               <div className="flex items-center gap-4 mb-6">
                 <div className="bg-[#362A71] p-4 rounded-2xl text-white group-hover:bg-[#F85A21] transition-colors">
@@ -149,9 +149,9 @@ export default function LocateUs() {
               <div className="space-y-4 text-sm font-medium text-gray-600">
                 <p className="leading-relaxed min-h-[60px]">{loc.address}</p>
                 <div className="h-[1px] bg-gray-100 w-full my-4" />
-                <div className="flex items-center gap-3 text-[#362A71] hover:text-[#F85A21] cursor-pointer transition-colors">
+                <div className="flex min-w-0 items-center gap-3 text-[#362A71] transition-colors hover:text-[#F85A21]">
                   <Mail size={18} />
-                  <span className="font-bold">{loc.email}</span>
+                  <span className="break-all font-bold">{loc.email}</span>
                 </div>
                 <div className="flex items-center gap-3 text-[#362A71] font-black text-lg">
                   <Phone size={18} />

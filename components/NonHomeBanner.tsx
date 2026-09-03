@@ -26,12 +26,12 @@ function getPageTitle(pathname: string) {
 export default function NonHomeBanner() {
   const pathname = usePathname();
 
-  if (pathname === "/") {
+  if (pathname === "/" || pathname === "/contact") {
     return null;
   }
 
   return (
-    <section className="relative isolate flex min-h-[260px] items-end overflow-hidden bg-[#362A71] px-6 pb-10 pt-36 sm:min-h-[320px] sm:px-10 sm:pb-14 lg:px-16">
+    <section className="relative isolate flex min-h-[340px] items-end overflow-hidden bg-[#362A71] px-6 pb-10 pt-36 sm:min-h-[420px] sm:px-10 sm:pb-14 lg:min-h-[480px] lg:px-16">
       <Image
         src="/images/pexels-pixabay-247763.jpg"
         alt="Modern Window King window installation"

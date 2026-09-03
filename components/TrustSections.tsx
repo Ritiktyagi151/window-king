@@ -31,11 +31,11 @@ const awards = [
 
 // --- CLIENTS DATA ---
 const clients = [
-  { name: "ITM University", logo: "https://www.shutterstock.com/shutterstock/photos/2646844501/display_1500/stock-photo-logo-design-for-a-car-oil-brand-named-disluven-incorporate-a-golden-oil-drop-integrated-with-a-2646844501.jpg" },
-  { name: "Fortis Hospitals", logo: "https://www.shutterstock.com/shutterstock/photos/2383636793/display_1500/stock-vector-creative-purity-icon-vector-sign-2383636793.jpg" },
-  { name: "Sheyn School", logo: "https://www.shutterstock.com/shutterstock/photos/2714546831/display_1500/stock-photo-a-logo-for-a-podcast-that-is-called-industrial-world-2714546831.jpg" },
-  { name: "XLRI", logo: "https://www.shutterstock.com/shutterstock/photos/1225777705/display_1500/stock-vector-industrial-logo-design-1225777705.jpg" },
-  { name: "Zauba Corp", logo: "https://www.shutterstock.com/shutterstock/photos/1324410407/display_1500/stock-vector-industrial-logo-design-1324410407.jpg" },
+  { name: "Window King", logo: "/windowking.png" },
+  { name: "Window King Private Limited", logo: "/windowking.png" },
+  { name: "uPVC Glass Windows", logo: "/windowking.png" },
+  { name: "Puri Odisha", logo: "/windowking.png" },
+  { name: "Quality Products", logo: "/windowking.png" },
 ];
 
 export default function TrustSections() {
@@ -96,7 +96,7 @@ export default function TrustSections() {
         <div className="mx-auto mb-12 flex max-w-7xl flex-col items-start justify-between gap-5 px-4 sm:flex-row sm:items-end">
           <div className="text-white">
             <h2 className="text-3xl font-black uppercase tracking-tighter sm:text-4xl">Our <span className="text-[#F85A21]">Clientele</span></h2>
-            <p className="text-gray-300 mt-2">Trusted by India's leading institutions and corporations.</p>
+            <p className="text-gray-300 mt-2">Known in Puri for quality uPVC glass windows and dependable service.</p>
           </div>
           <button className="text-[#F85A21] border-2 border-[#F85A21] px-6 py-2 rounded-full font-bold hover:bg-[#F85A21] hover:text-white transition-all text-sm">
             VIEW ALL
@@ -110,12 +110,12 @@ export default function TrustSections() {
               <motion.div 
                 key={i}
                 whileHover={{ scale: 1.1 }}
-                className="mx-4 flex-shrink-0 bg-white/10 backdrop-blur-sm p-6 rounded-xl border border-white/10"
+                className="group mx-4 flex h-28 w-44 flex-shrink-0 items-center justify-center rounded-xl border border-white/15 bg-white p-5 shadow-xl shadow-black/10 backdrop-blur-sm sm:h-32 sm:w-52"
               >
                 <img 
                   src={client.logo} 
                   alt={client.name} 
-                  className="h-16 w-auto object-contain brightness-0 invert opacity-70 hover:opacity-100 transition-opacity" 
+                  className="h-full w-full object-contain transition-transform duration-300 group-hover:scale-105" 
                 />
               </motion.div>
             ))}

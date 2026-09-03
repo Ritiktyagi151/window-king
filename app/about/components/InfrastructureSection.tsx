@@ -59,8 +59,8 @@ export default function InfrastructureSection() {
             whileInView={{ scale: 1 }}
             className="absolute -bottom-8 right-4 z-20 bg-[#F85A21] p-5 text-white shadow-2xl md:-bottom-10 md:-right-10 md:p-8"
           >
-            <p className="font-black text-3xl md:text-4xl leading-none">50,000</p>
-            <p className="text-[10px] font-bold uppercase tracking-[0.2em] mt-1">Sq. Ft. Facility</p>
+            <p className="font-black text-3xl md:text-4xl leading-none">2021</p>
+            <p className="text-[10px] font-bold uppercase tracking-[0.2em] mt-1">Established</p>
           </motion.div>
         </div>
 
@@ -71,15 +71,15 @@ export default function InfrastructureSection() {
               Manufacturing <br /> <span className="text-[#F85A21]">Might</span>
             </h2>
             <p className="mb-10 border-l-4 border-[#F85A21] pl-5 text-base italic leading-relaxed text-gray-600 md:pl-6 md:text-lg">
-              "Actions are louder than words. Window King experts undertake any possibility of designing to manufacturing uPVC and Aluminium solutions."
+              Established in 2021, WINDOW KING PRIVATE LIMITED manufactures and supplies uPVC glass windows with a focus on quality products and dependable service.
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-10">
-            <InfoPoint idx={1} icon={<Settings size={22} />} title="Advanced Machinery" desc="German CNC technology ensuring sub-millimeter precision in every cut." />
-            <InfoPoint idx={2} icon={<Users size={22} />} title="Expert Team" desc="Trained engineers with years of experience in complex architectural designs." />
-            <InfoPoint idx={3} icon={<Warehouse size={22} />} title="Mega Warehouse" desc="Systematic storage to ensure ready-to-ship inventory and rapid delivery." />
-            <InfoPoint idx={4} icon={<Heart size={22} />} title="Customer First" desc="Relationship beyond projects. We earn trust with flawless end-to-end service." />
+            <InfoPoint idx={1} icon={<Settings size={22} />} title="Focused Manufacturing" desc="uPVC glass window production handled with attention to quality and finish." />
+            <InfoPoint idx={2} icon={<Users size={22} />} title="Customer Guidance" desc="Support that helps customers choose suitable window solutions for their needs." />
+            <InfoPoint idx={3} icon={<Warehouse size={22} />} title="Reliable Supply" desc="Manufacturer and supplier capabilities for residential and commercial requirements." />
+            <InfoPoint idx={4} icon={<Heart size={22} />} title="Service First" desc="A dependable service approach that builds trust beyond the initial enquiry." />
           </div>
 
           <div className="mt-12 flex flex-wrap gap-6 border-t border-gray-100 pt-8 font-bold text-[#362A71] text-[10px] uppercase tracking-widest">
@@ -93,7 +93,7 @@ export default function InfrastructureSection() {
   );
 }
 
-function InfoPoint({ icon, title, desc, idx }: { icon: any; title: string; desc: string; idx: number }) {
+function InfoPoint({ icon, title, desc, idx }: { icon: React.ReactNode; title: string; desc: string; idx: number }) {
   return (
     <motion.div 
       initial={{ opacity: 0, x: 20 }}

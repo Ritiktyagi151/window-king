@@ -33,7 +33,7 @@ export default function InnovationSection() {
   ];
 
   return (
-    <section className="flex w-full flex-col justify-center overflow-hidden bg-white py-14 md:min-h-[85vh] md:py-16">
+    <section className="flex w-full flex-col justify-center overflow-hidden bg-white py-14 md:py-16">
       <div className="max-w-7xl mx-auto px-6 w-full h-full flex flex-col">
         
         {/* Header */}
@@ -58,7 +58,7 @@ export default function InnovationSection() {
         </div>
 
         {/* Bento Grid - Box sizes are fixed regardless of image dimensions */}
-        <div className="grid grid-cols-1 md:grid-cols-4 md:grid-rows-2 gap-4 flex-grow min-h-0">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-4 md:grid-rows-[260px_260px] lg:grid-rows-[300px_300px]">
           {innovations.map((item, index) => (
             <motion.div
               key={index}

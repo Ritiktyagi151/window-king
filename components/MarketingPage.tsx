@@ -1,4 +1,5 @@
 import Link from "next/link";
+import RawDocumentContent from "./RawDocumentContent";
 
 export type MarketingMetric = {
   label: string;
@@ -19,6 +20,7 @@ export type MarketingPageContent = {
   metrics: MarketingMetric[];
   pillars: MarketingItem[];
   highlights: MarketingItem[];
+  sourceDocuments?: { title: string; fileName: string }[];
 };
 
 export default function MarketingPage({
@@ -128,6 +130,13 @@ export default function MarketingPage({
           </div>
         </div>
       </section>
+
+      {content.sourceDocuments ? (
+        <RawDocumentContent
+          title={`${content.title} Source Content`}
+          documents={content.sourceDocuments}
+        />
+      ) : null}
     </div>
   );
 }

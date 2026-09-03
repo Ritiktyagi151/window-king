@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 
 export default function TimelineSection() {
   const milestones = [
-    { year: "2010", title: "The Foundation", desc: "Start of a vision to bring silence and dust-free living to India." },
-    { year: "2015", title: "The Expansion", desc: "Established North India's largest integrated uPVC manufacturing unit." },
-    { year: "2020", title: "Luxury Aluminium", desc: "Launched Slim-line profiles for world-class architectural designs." },
-    { year: "2024", title: "Window King+", desc: "Setting a new benchmark with AI-integrated smart window solutions." }
+    { year: "2021", title: "Established", desc: "WINDOW KING PRIVATE LIMITED began its journey as a uPVC glass window manufacturer and supplier." },
+    { year: "Puri", title: "Local Presence", desc: "Built recognition in Puri through quality products and dependable customer service." },
+    { year: "uPVC", title: "Product Focus", desc: "Focused on practical uPVC glass window solutions for homes and commercial spaces." },
+    { year: "Now", title: "Service First", desc: "Continuing to support customers with reliable guidance, supply, and installation coordination." }
   ];
 
   return (

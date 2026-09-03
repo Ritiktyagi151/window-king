@@ -5,7 +5,7 @@ export const standalonePages: Record<string, MarketingPageContent> = {
     eyebrow: "Why Window King",
     title: "Quality Standards",
     description:
-      "Every Window King system is developed with a strong focus on durability, finish consistency, weather resistance, and installation reliability.",
+      "Established in 2021, WINDOW KING PRIVATE LIMITED is known in Puri for quality uPVC glass windows and dependable service.",
     primaryCta: { href: "/contact", label: "Book Consultation" },
     secondaryCta: { href: "/about/infrastructure", label: "View Facility" },
     metrics: [
@@ -53,13 +53,16 @@ export const standalonePages: Record<string, MarketingPageContent> = {
           "Structured coordination between design, production, and site teams keeps delivery on track.",
       },
     ],
+    sourceDocuments: [
+      { title: "Why Choose uPVC", fileName: "Why Choose uPVC.txt" },
+    ],
   },
   innovation: {
     eyebrow: "Why Window King",
     title: "Innovation Lab",
     description:
       "We combine modern fabrication practices, detail-led engineering, and custom product thinking to solve real design and performance challenges.",
-    primaryCta: { href: "/products/aluminium", label: "Explore Systems" },
+    primaryCta: { href: "/products/upvc-doors", label: "Explore Door Series" },
     secondaryCta: { href: "/contact", label: "Discuss Project" },
     metrics: [
       { label: "Custom Design", value: "Bespoke" },
@@ -106,12 +109,15 @@ export const standalonePages: Record<string, MarketingPageContent> = {
           "Recommendations reflect opening size, orientation, use case, and installation realities.",
       },
     ],
+    sourceDocuments: [
+      { title: "Why Window King", fileName: "Why Window King .txt" },
+    ],
   },
   service: {
     eyebrow: "Why Window King",
     title: "After Sales Service",
     description:
-      "Service is treated as part of the product experience, with support for consultation, installation coordination, maintenance guidance, and post-handover needs.",
+      "Service is central to WINDOW KING PRIVATE LIMITED, from product guidance to dependable support for uPVC glass window customers.",
     primaryCta: { href: "/contact", label: "Talk to Support" },
     secondaryCta: { href: "/quality", label: "See Standards" },
     metrics: [
@@ -159,12 +165,15 @@ export const standalonePages: Record<string, MarketingPageContent> = {
           "A support-first mindset helps build trust beyond the initial project delivery.",
       },
     ],
+    sourceDocuments: [
+      { title: "Why Window King", fileName: "Why Window King .txt" },
+    ],
   },
   residential: {
     eyebrow: "Showcase",
     title: "Residential Projects",
     description:
-      "Window King residential systems are designed to elevate comfort, acoustic performance, daylight, and facade appeal for modern homes.",
+      "Window King supplies quality uPVC glass windows for homes, helping customers improve comfort, daylight, and everyday usability.",
     primaryCta: { href: "/products/upvc", label: "View uPVC Range" },
     secondaryCta: { href: "/contact", label: "Plan Home Project" },
     metrics: [
@@ -212,13 +221,16 @@ export const standalonePages: Record<string, MarketingPageContent> = {
           "Materials and finishes chosen for simpler upkeep in busy households.",
       },
     ],
+    sourceDocuments: [
+      { title: "Window King About Us", fileName: "window king About us.txt" },
+    ],
   },
   commercial: {
     eyebrow: "Showcase",
     title: "Commercial Projects",
     description:
-      "Our commercial solutions balance strong performance, clean detailing, and execution discipline for offices, retail spaces, institutions, and mixed-use developments.",
-    primaryCta: { href: "/products/aluminium", label: "View Aluminium Range" },
+      "Our commercial uPVC glass window solutions focus on reliable supply, practical detailing, and dependable service for project needs.",
+    primaryCta: { href: "/products/upvc-doors", label: "View Door Series" },
     secondaryCta: { href: "/contact", label: "Discuss Commercial Build" },
     metrics: [
       { label: "Project Types", value: "Mixed" },
@@ -265,12 +277,15 @@ export const standalonePages: Record<string, MarketingPageContent> = {
           "Coordination across varying opening types and functional requirements.",
       },
     ],
+    sourceDocuments: [
+      { title: "Window King About Us", fileName: "window king About us.txt" },
+    ],
   },
   gallery: {
     eyebrow: "Showcase",
     title: "Project Gallery",
     description:
-      "A curated look at Window King design language, installation quality, and finished spaces across residential and commercial applications.",
+      "A curated look at Window King uPVC glass window quality, finished details, and residential or commercial applications.",
     primaryCta: { href: "/residential", label: "See Residential Work" },
     secondaryCta: { href: "/commercial", label: "See Commercial Work" },
     metrics: [
@@ -318,114 +333,160 @@ export const standalonePages: Record<string, MarketingPageContent> = {
           "A mix of home and commercial references to support faster decision-making.",
       },
     ],
+    sourceDocuments: [
+      { title: "Window King About Us", fileName: "window king About us.txt" },
+    ],
   },
 };
 
 export const productPages: Record<string, MarketingPageContent> = {
   upvc: {
     eyebrow: "Products",
-    title: "uPVC Windows",
+    title: "uPVC Window Series",
     description:
-      "Window King's uPVC range is designed for everyday durability, thermal comfort, noise control, and effortless visual neatness.",
+      "Our qualitative uPVC window range includes sliding, casement, fixed, villa, combination, tilt and turn, bay, arch, ventilator, French, and awning or top hung designs.",
     primaryCta: { href: "/contact", label: "Get Product Advice" },
     secondaryCta: { href: "/quality", label: "See Quality Focus" },
     metrics: [
-      { label: "Noise Control", value: "Strong" },
-      { label: "Maintenance", value: "Low" },
-      { label: "Weather Seal", value: "High" },
+      { label: "Window Designs", value: "11" },
+      { label: "Material", value: "uPVC" },
+      { label: "Custom Fit", value: "Yes" },
+      { label: "Applications", value: "Home" },
+    ],
+    pillars: [
+      {
+        title: "Complete window range",
+        description:
+          "Window King offers practical uPVC window designs for homes, offices, and commercial spaces.",
+      },
+      {
+        title: "Custom design support",
+        description:
+          "Customers can ask the Window King expert team for customized designs that fit their opening, usage, and style needs.",
+      },
+      {
+        title: "Quality and service",
+        description:
+          "The range is backed by quality-focused manufacturing, dependable supply, and practical customer guidance.",
+      },
+    ],
+    highlights: [
+      {
+        title: "uPVC Sliding Window",
+        description:
+          "Smooth horizontal sliding window option for everyday use and space-saving openings.",
+      },
+      {
+        title: "uPVC Casement Window",
+        description:
+          "Side-hinged window design suitable for strong ventilation and simple operation.",
+      },
+      {
+        title: "uPVC Fixed Window",
+        description:
+          "Fixed glass window option for daylight, visibility, and clean architectural looks.",
+      },
+      {
+        title: "uPVC Villa Window",
+        description:
+          "A refined window choice for villas and larger residential openings.",
+      },
+      {
+        title: "uPVC Combination Window",
+        description:
+          "Combines fixed and openable panels to suit different space and airflow needs.",
+      },
+      {
+        title: "uPVC Tilt & Turn Window",
+        description:
+          "Flexible window system that supports controlled ventilation and easy access.",
+      },
+      {
+        title: "uPVC Bay Window",
+        description:
+          "Projecting window style that adds openness, light, and visual character.",
+      },
+      {
+        title: "uPVC Arch Window",
+        description:
+          "Curved window design for decorative and architectural openings.",
+      },
+      {
+        title: "Ventilator",
+        description:
+          "Compact ventilation solution for utility areas, bathrooms, and service spaces.",
+      },
+      {
+        title: "French Window",
+        description:
+          "Classic full-height window style for elegant openings and better outdoor connection.",
+      },
+      {
+        title: "Awning / Top Hung",
+        description:
+          "Top-hinged window design suited for ventilation with practical weather protection.",
+      },
+    ],
+    sourceDocuments: [
+      { title: "Content for B2B Potal", fileName: "Content for B2B Potal.txt" },
+      { title: "Why Choose uPVC", fileName: "Why Choose uPVC.txt" },
+    ],
+  },
+  "upvc-doors": {
+    eyebrow: "Products",
+    title: "uPVC Door Series",
+    description:
+      "Our uPVC door range includes sliding doors, casement doors, slide and folding doors, and lift and sliding doors for homes, offices, and commercial spaces.",
+    primaryCta: { href: "/contact", label: "Discuss Door Design" },
+    secondaryCta: { href: "/products/upvc", label: "View Window Series" },
+    metrics: [
+      { label: "Door Designs", value: "4" },
+      { label: "Material", value: "uPVC" },
+      { label: "Custom Fit", value: "Yes" },
       { label: "Applications", value: "Wide" },
     ],
     pillars: [
       {
-        title: "Comfort-oriented systems",
+        title: "Door range",
         description:
-          "A strong fit for homes and light commercial projects where sealing and acoustic support matter.",
+          "Window King offers practical uPVC door designs for residential, office, and commercial requirements.",
       },
       {
-        title: "Flexible configurations",
+        title: "Customized to fit",
         description:
-          "Suitable for casement, sliding, top hung, and other practical opening types.",
+          "The expert team can help customize designs according to the site opening, movement needs, and project style.",
       },
       {
-        title: "Long-term ease",
+        title: "Quality supply and support",
         description:
-          "Low-maintenance profiles make uPVC a dependable choice for busy properties.",
+          "Every door solution is supported by quality-focused product selection and dependable service.",
       },
     ],
     highlights: [
       {
-        title: "Casement options",
+        title: "uPVC Sliding Door",
         description:
-          "Reliable daily-use windows with solid sealing and familiar operation.",
+          "Space-saving sliding door solution for balconies, rooms, and wider openings.",
       },
       {
-        title: "Sliding formats",
+        title: "uPVC Casement Door",
         description:
-          "Space-efficient movement for balconies, bedrooms, and compact openings.",
+          "Hinged door option for familiar operation, dependable use, and clean finishing.",
       },
       {
-        title: "Noise-conscious variants",
+        title: "uPVC Slide And Folding Door",
         description:
-          "Well-suited for urban sites where quieter interiors are important.",
+          "Folding system for openings where flexible access and space management matter.",
       },
       {
-        title: "Clean white and custom looks",
+        title: "uPVC Lift And Sliding Door",
         description:
-          "Profile finishes that work across simple and premium interior palettes.",
+          "Smooth large-opening door system for premium movement and practical access.",
       },
     ],
-  },
-  aluminium: {
-    eyebrow: "Products",
-    title: "Aluminium Series",
-    description:
-      "Our aluminium systems are built for slimmer sightlines, premium aesthetics, robust performance, and elevated architectural expression.",
-    primaryCta: { href: "/contact", label: "Discuss Specifications" },
-    secondaryCta: { href: "/innovation", label: "Visit Innovation Lab" },
-    metrics: [
-      { label: "Sightlines", value: "Slim" },
-      { label: "Design Feel", value: "Luxury" },
-      { label: "Project Fit", value: "Premium" },
-      { label: "Facade Value", value: "High" },
-    ],
-    pillars: [
-      {
-        title: "Architectural presence",
-        description:
-          "Well-suited for projects where clean lines and premium finishes are part of the design language.",
-      },
-      {
-        title: "Performance-ready detailing",
-        description:
-          "Systems are selected with strength, scale, and smooth operation in mind.",
-      },
-      {
-        title: "Indoor-outdoor connection",
-        description:
-          "A strong choice for larger openings, sliders, and statement installations.",
-      },
-    ],
-    highlights: [
-      {
-        title: "Luxury sliders",
-        description:
-          "Expansive openings that support openness, daylight, and visual continuity.",
-      },
-      {
-        title: "Slim casements",
-        description:
-          "A refined alternative when design minimalism is a major priority.",
-      },
-      {
-        title: "High-end facades",
-        description:
-          "Strong visual fit for premium homes, offices, and hospitality spaces.",
-      },
-      {
-        title: "Custom fabrication",
-        description:
-          "A flexible route for tailored dimensions and project-specific detailing.",
-      },
+    sourceDocuments: [
+      { title: "Window King About Us", fileName: "window king About us.txt" },
+      { title: "Content for B2B Potal", fileName: "Content for B2B Potal.txt" },
     ],
   },
 };

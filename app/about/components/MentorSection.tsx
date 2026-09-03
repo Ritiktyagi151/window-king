@@ -12,7 +12,7 @@ export default function MentorSection() {
         <h2 className="text-[#362A71] text-4xl font-black uppercase mb-2">Rajesh Parida</h2>
         <p className="text-[#F85A21] font-bold uppercase tracking-[0.4em] text-xs mb-8">The Guiding Force</p>
         <p className="text-2xl md:text-3xl font-light italic text-gray-500 leading-snug">
-          "Our mentor Rajesh Parida is the guiding force behind our rapid growth. His expertise encourages us to bring out perfect innovation in our offered range."
+          Our mentor Rajesh Parida guides WINDOW KING PRIVATE LIMITED with a focus on quality uPVC glass windows, dependable service, and customer trust.
         </p>
         <div className="mt-8 h-1 w-20 bg-[#F85A21] mx-auto rounded-full" />
         <p className="mt-4 font-black text-[#362A71] text-sm uppercase">Company Mentor</p>

@@ -2,9 +2,15 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
 
 export default function RangeSection() {
-  const categories = ["Design", "Series", "Material", "Space"];
+  const categories = [
+    { label: "Sliding Window", href: "/products/upvc" },
+    { label: "Casement Window", href: "/products/upvc" },
+    { label: "Sliding Door", href: "/products/upvc-doors" },
+    { label: "Lift & Sliding Door", href: "/products/upvc-doors" },
+  ];
 
   return (
     <section className="my-8 flex w-full items-center overflow-hidden bg-white py-14 md:my-10 md:min-h-[80vh] md:py-20">
@@ -33,8 +39,8 @@ export default function RangeSection() {
               />
             </div>
             <div className="absolute -bottom-4 -right-2 md:-bottom-6 md:-right-6 bg-[#F85A21] text-white p-5 md:p-8 rounded-2xl shadow-xl z-20">
-              <p className="text-2xl md:text-4xl font-black leading-none">25+</p>
-              <p className="text-[10px] font-bold uppercase tracking-widest mt-1 opacity-90">Years Exp.</p>
+              <p className="text-2xl md:text-4xl font-black leading-none">2021</p>
+              <p className="text-[10px] font-bold uppercase tracking-widest mt-1 opacity-90">Established</p>
             </div>
           </motion.div>
 
@@ -52,25 +58,28 @@ export default function RangeSection() {
             
             <h2 className="mb-4 text-3xl font-black leading-tight text-[#362A71] sm:text-4xl md:text-5xl">
               Wide Range <br />
-              <span className="text-gray-400 font-light italic text-2xl md:text-3xl tracking-tight">Windows & Doors</span>
+              <span className="text-gray-400 font-light italic text-2xl md:text-3xl tracking-tight">uPVC Windows & Doors</span>
             </h2>
             
             <p className="text-gray-500 mb-8 leading-relaxed text-sm md:text-base">
-              Transform your living space with designs that balance safety and modern aesthetics perfectly.
+              Explore Window King uPVC Sliding Windows, Casement Windows,
+              Fixed Windows, Villa Windows, Combination Windows, Tilt & Turn,
+              Bay, Arch, Ventilator, French, Awning / Top Hung designs, plus
+              uPVC door solutions.
             </p>
 
             <div className="grid grid-cols-2 gap-3 mb-8">
               {categories.map((cat) => (
-                <div key={cat} className="group flex items-center justify-between p-3 border border-gray-100 rounded-xl hover:border-[#F85A21] hover:bg-[#F85A21]/5 transition-all cursor-pointer">
-                  <span className="font-bold text-[#362A71] uppercase text-[10px] md:text-xs tracking-wider">{cat}</span>
+                <Link key={cat.label} href={cat.href} className="group flex items-center justify-between p-3 border border-gray-100 rounded-xl hover:border-[#F85A21] hover:bg-[#F85A21]/5 transition-all cursor-pointer">
+                  <span className="font-bold text-[#362A71] uppercase text-[10px] md:text-xs tracking-wider">{cat.label}</span>
                   <ArrowUpRight size={14} className="text-[#F85A21] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-                </div>
+                </Link>
               ))}
             </div>
 
-            <button className="w-full py-4 bg-[#362A71] text-white font-black rounded-xl text-sm hover:bg-[#F85A21] transition-all shadow-lg">
+            <Link href="/products/upvc" className="block w-full py-4 bg-[#362A71] text-center text-white font-black rounded-xl text-sm hover:bg-[#F85A21] transition-all shadow-lg">
               EXPLORE CATALOGUE
-            </button>
+            </Link>
           </motion.div>
         </div>
       </div>

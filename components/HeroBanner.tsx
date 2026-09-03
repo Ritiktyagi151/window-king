@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
+import VirtualShowroomTour from "./VirtualShowroomTour";
 
 export default function HeroBanner() {
   const videoRef = useRef<HTMLVideoElement | null>(null);
@@ -15,7 +16,7 @@ export default function HeroBanner() {
   }, []);
 
   return (
-    <div className="relative w-full min-h-[620px] overflow-hidden bg-black pt-24 sm:pt-28 md:mt-28 md:h-[85vh] md:min-h-0 md:pt-0">
+    <div className="relative w-full min-h-[620px] overflow-hidden bg-black pt-24 sm:pt-28 md:h-screen md:min-h-0 md:pt-0">
       
       {/* --- Background Video --- */}
       <video
@@ -54,14 +55,16 @@ export default function HeroBanner() {
           </motion.div>
 
           <motion.p className="mt-6 max-w-2xl text-sm font-medium leading-relaxed text-gray-100 drop-shadow-md sm:text-base md:text-lg">
-            India's premier choice for uPVC and Aluminium Windows & Doors. 
-            Experience silence, safety, and style in every frame.
+            Established in 2021, WINDOW KING PRIVATE LIMITED is a trusted
+            manufacturer and supplier of uPVC glass windows, known in Puri for
+            quality products and dependable service.
           </motion.p>
 
           <div className="mt-10 flex w-full max-w-md flex-col gap-4 sm:max-w-none sm:flex-row sm:justify-center sm:gap-5">
             <button className="w-full rounded-full bg-[#362A71] px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] text-white shadow-xl transition-all hover:bg-[#F85A21] active:scale-95 sm:w-auto sm:px-10">
               View Collection
             </button>
+            <VirtualShowroomTour />
             <button className="w-full rounded-full border border-white/40 px-8 py-4 text-xs font-bold uppercase tracking-[0.2em] text-white backdrop-blur-md transition-all hover:bg-white hover:text-[#362A71] active:scale-95 sm:w-auto sm:px-10">
               Consult an Expert
             </button>

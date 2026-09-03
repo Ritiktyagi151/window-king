@@ -33,14 +33,16 @@ export default function BrandStory() {
 
             <div className="mt-8 space-y-6 text-base leading-relaxed text-gray-700 md:text-lg">
               <p>
-                We, <span className="text-[#362A71] font-bold">"Window King Private Limited"</span> are a premier 
-                Manufacturer, Wholesaler, and Trader of high-quality 
-                <span className="bg-orange-50 px-1 font-medium"> UPVC Top Hung Windows, Noise Proofing Solutions, and Casement Windows.</span>
+                Established in <span className="font-semibold">2021</span>, we,
+                <span className="text-[#362A71] font-bold"> WINDOW KING PRIVATE LIMITED</span>, are a trusted
+                manufacturer and supplier of
+                <span className="bg-orange-50 px-1 font-medium"> uPVC glass windows</span>.
               </p>
               
               <p className="text-base text-gray-600">
-                Our offered range consists of best-grade products acknowledged for their 
-                <span className="font-semibold italic"> easy-to-use design, superior quality, and long-lasting durability.</span>
+                From Puri, we are known for
+                <span className="font-semibold italic"> quality products, dependable service, and practical window solutions</span>
+                for residential and commercial needs.
               </p>
 
               {/* Mentor Highlight Card */}
@@ -65,15 +67,15 @@ export default function BrandStory() {
             
             <FeatureCard 
               icon={<ShieldCheck className="text-white" />} 
-              title="High Quality" 
-              desc="Certified best-grade materials for maximum safety."
+              title="Quality Products" 
+              desc="uPVC glass windows made with attention to finish and durability."
               color="bg-[#362A71]"
               delay={0.2}
             />
             <FeatureCard 
               icon={<Zap className="text-white" />} 
-              title="Innovation" 
-              desc="Deep expertise in modern noise-proofing tech."
+              title="Dependable Service" 
+              desc="Customer-focused support from enquiry through installation."
               color="bg-[#F85A21]"
               delay={0.4}
             />
@@ -84,8 +86,8 @@ export default function BrandStory() {
                 className="p-8 rounded-3xl bg-slate-900 text-white relative overflow-hidden group"
                >
                   <Award className="absolute right-4 bottom-4 text-white/10 w-32 h-32 rotate-12" />
-                  <h4 className="text-xl font-bold mb-2">Long Life Guaranteed</h4>
-                  <p className="text-gray-400 text-sm">Our products are acknowledged for their extreme durability and ease of maintenance.</p>
+                  <h4 className="text-xl font-bold mb-2">Established in 2021</h4>
+                  <p className="text-gray-400 text-sm">A growing Puri-based company focused on trusted uPVC window manufacturing and supply.</p>
                </motion.div>
             </div>
           </div>
@@ -96,7 +98,19 @@ export default function BrandStory() {
   );
 }
 
-function FeatureCard({ icon, title, desc, color, delay }: any) {
+function FeatureCard({
+  icon,
+  title,
+  desc,
+  color,
+  delay,
+}: {
+  icon: React.ReactNode;
+  title: string;
+  desc: string;
+  color: string;
+  delay: number;
+}) {
   return (
     <motion.div
       initial={{ opacity: 0, scale: 0.8 }}

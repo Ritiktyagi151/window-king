@@ -1,12 +1,12 @@
 "use client";
 import { motion } from "framer-motion";
-import { ClipboardList, Building2, User, Landmark, ShieldCheck } from "lucide-react";
+import { ClipboardList, Building2, User, ShieldCheck } from "lucide-react";
 
 export default function FactsheetSection() {
   const statutoryData = [
     { label: "CEO", value: "RAJESH PARIDA", icon: <User size={20} /> },
-    { label: "Nature of Business", value: "Manufacturer & Trader", icon: <Building2 size={20} /> },
-    { label: "Total Employees", value: "11 to 25 People", icon: <ClipboardList size={20} /> },
+    { label: "Nature of Business", value: "Manufacturer & Supplier", icon: <Building2 size={20} /> },
+    { label: "Location", value: "Puri, Odisha", icon: <ClipboardList size={20} /> },
     { label: "Legal Status", value: "Limited Company", icon: <ShieldCheck size={20} /> }
   ];
 

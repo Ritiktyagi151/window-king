@@ -43,10 +43,10 @@ function Counter({ value, isInView }: { value: string; isInView: boolean }) {
 
 export default function StatsSection() {
   const stats = [
-    { label: "Products Available", value: "35+" },
-    { label: "Total Employees", value: "25+" }, //
-    { label: "Manufacturing Area", value: "50k" }, //
-    { label: "Expert Engineers", value: "10+" }, //
+    { label: "Established", value: "2021" },
+    { label: "Location", value: "Puri" },
+    { label: "Business Type", value: "Supplier" },
+    { label: "Product Focus", value: "uPVC" },
   ];
 
   return (
@@ -60,47 +60,56 @@ export default function StatsSection() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4 md:gap-6">
-          {stats.map((stat, i) => {
-            const cardRef = useRef(null);
-            const isCardInView = useInView(cardRef, { once: false, amount: 0.5 });
-
-            return (
-              <motion.div
-                ref={cardRef}
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, amount: 0.5 }}
-                transition={{ 
-                  delay: i * 0.1, 
-                  duration: 0.5,
-                  ease: "easeOut"
-                }}
-                // Cards par blur aur glassmorphism effects apply kiya gaya hai
-                className="group relative flex flex-col items-center justify-center overflow-hidden rounded-2xl border border-white/20 bg-white/10 p-8 shadow-2xl backdrop-blur-xl transition-all duration-500 hover:bg-[#F85A21]/90 hover:scale-105 md:rounded-3xl md:p-10"
-              >
-                {/* Internal Glow Effect */}
-                <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-white/10 blur-3xl rounded-full transition-opacity group-hover:opacity-20" />
-
-                <span className="flex items-center text-4xl font-black tracking-tighter text-white transition-transform group-hover:scale-110 md:text-6xl">
-                  {/[0-9]/.test(stat.value) ? (
-                    <Counter value={stat.value} isInView={isCardInView} />
-                  ) : (
-                    stat.value
-                  )}
-                </span>
-                
-                <span className="text-[#F85A21] text-[10px] font-bold uppercase tracking-[0.2em] mt-3 group-hover:text-white transition-colors text-center">
-                  {stat.label}
-                  {stat.label === "Manufacturing Area" && (
-                    <span className="block text-[8px] opacity-80 mt-1 uppercase tracking-widest font-medium">Sq. Ft. Facility</span> //
-                  )}
-                </span>
-              </motion.div>
-            );
-          })}
+          {stats.map((stat, i) => (
+            <StatCard key={stat.label} stat={stat} index={i} />
+          ))}
         </div>
       </div>
     </div>
+  );
+}
+
+function StatCard({
+  stat,
+  index,
+}: {
+  stat: { label: string; value: string };
+  index: number;
+}) {
+  const cardRef = useRef(null);
+  const isCardInView = useInView(cardRef, { once: false, amount: 0.5 });
+
+  return (
+    <motion.div
+      ref={cardRef}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: false, amount: 0.5 }}
+      transition={{
+        delay: index * 0.1,
+        duration: 0.5,
+        ease: "easeOut",
+      }}
+      className="group relative flex flex-col items-center justify-center overflow-hidden rounded-2xl border border-white/20 bg-white/10 p-8 shadow-2xl backdrop-blur-xl transition-all duration-500 hover:bg-[#F85A21]/90 hover:scale-105 md:rounded-3xl md:p-10"
+    >
+      <div className="absolute -left-1/2 -top-1/2 h-full w-full rounded-full bg-white/10 blur-3xl transition-opacity group-hover:opacity-20" />
+
+      <span className="flex items-center text-4xl font-black tracking-tighter text-white transition-transform group-hover:scale-110 md:text-6xl">
+        {/[0-9]/.test(stat.value) ? (
+          <Counter value={stat.value} isInView={isCardInView} />
+        ) : (
+          stat.value
+        )}
+      </span>
+
+      <span className="mt-3 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-[#F85A21] transition-colors group-hover:text-white">
+        {stat.label}
+        {stat.label === "Product Focus" && (
+          <span className="mt-1 block text-[8px] font-medium uppercase tracking-widest opacity-80">
+            Glass Windows
+          </span>
+        )}
+      </span>
+    </motion.div>
   );
 }

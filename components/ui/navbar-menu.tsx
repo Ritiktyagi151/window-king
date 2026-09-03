@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion"; // 'motion/react' ki jagah standard 'framer-motion' use karein
+import { cn } from "@/lib/utils";
 
 const transition = {
   type: "spring",
@@ -16,18 +17,23 @@ export const MenuItem = ({
   active,
   item,
   children,
+  transparent = false,
 }: {
   setActive: (item: string) => void;
   active: string | null;
   item: string;
   children?: React.ReactNode;
+  transparent?: boolean;
 }) => {
   return (
     <div onMouseEnter={() => setActive(item)} className="relative">
       <motion.p
         transition={{ duration: 0.3 }}
         // Black color hatakar Purple (#362A71) kiya aur font-bold badha di
-        className="cursor-pointer whitespace-nowrap text-[#362A71] font-bold hover:text-[#F85A21] transition-colors duration-200"
+        className={cn(
+          "cursor-pointer whitespace-nowrap font-bold transition-colors duration-200 hover:text-[#F85A21]",
+          transparent ? "text-white" : "text-[#362A71]"
+        )}
       >
         {item}
       </motion.p>
@@ -64,15 +70,21 @@ export const MenuItem = ({
 export const Menu = ({
   setActive,
   children,
+  transparent = false,
 }: {
   setActive: (item: string | null) => void;
   children: React.ReactNode;
+  transparent?: boolean;
 }) => {
   return (
     <nav
       onMouseLeave={() => setActive(null)}
       // Navbar ka background white aur border halke purple-tint mein rakha hai
-      className="relative flex items-center justify-center space-x-4 rounded-full border border-gray-50 bg-white/80 px-6 py-4 shadow-lg backdrop-blur-md transition-all duration-300 2xl:space-x-8 2xl:px-10 2xl:py-5"
+      className={`relative flex items-center justify-center space-x-4 rounded-full border px-6 py-2.5 shadow-lg backdrop-blur-md transition-all duration-300 2xl:space-x-8 2xl:px-10 2xl:py-3 ${
+        transparent
+          ? "border-white/20 bg-white/10"
+          : "border-gray-50 bg-white/80"
+      }`}
     >
       {children}
     </nav>

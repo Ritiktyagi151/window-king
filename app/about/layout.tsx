@@ -2,12 +2,12 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About Window King | India's Leading uPVC & Aluminium Expert",
-  description: "Learn about Window King's journey since 2010. We specialize in German-tech uPVC windows, luxury aluminium series, and noise-proof solutions.",
+  title: "About Window King | uPVC Glass Window Manufacturer in Puri",
+  description: "Learn about WINDOW KING PRIVATE LIMITED, established in 2021 and known in Puri for quality uPVC glass windows and dependable service.",
   alternates: { canonical: "https://windowking.in/about" },
   openGraph: {
-    title: "About Window King | Engineering Excellence",
-    description: "Discover how we manufacture India's most durable windows.",
+    title: "About Window King | Established in 2021",
+    description: "Discover WINDOW KING PRIVATE LIMITED, a trusted manufacturer and supplier of uPVC glass windows from Puri.",
     images: ["/og-about.jpg"],
   },
 };

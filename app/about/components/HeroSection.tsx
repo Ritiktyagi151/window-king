@@ -24,7 +24,7 @@ export default function HeroSection() {
             Better by <br /> <span className="text-[#F85A21]">Design.</span>
           </h1>
           <p className="mt-8 max-w-xl border-l-4 border-[#F85A21] pl-5 text-base font-light leading-relaxed text-white/80 sm:text-lg md:pl-6 md:text-2xl">
-            Window King is a leading uPVC window company committed to high-quality products and exceptional customer service.
+            Established in 2021, WINDOW KING PRIVATE LIMITED is a trusted manufacturer and supplier of uPVC glass windows from Puri.
           </p>
         </motion.div>
       </div>

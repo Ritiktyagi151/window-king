@@ -4,9 +4,9 @@ import TimelineSection from "./TimelineSection";
 
 export default function ProfileSection() {
   const highlights = [
-    "50,000 Sq. Ft. Facility",
-    "German CNC Technology",
-    "11 to 25 Skilled Experts",
+    "Established in 2021",
+    "Manufacturer and Supplier",
+    "Known for Quality Service",
   ];
 
   return (
@@ -20,14 +20,12 @@ export default function ProfileSection() {
             Window <span className="text-[#F85A21]">King</span>
           </h2>
           <p className="text-base leading-relaxed text-gray-600 md:text-lg">
-            Window King is a leading uPVC and aluminium systems brand focused on
-            durable engineering, refined design, and dependable project
-            execution.
+            Established in 2021, WINDOW KING PRIVATE LIMITED is a trusted
+            manufacturer and supplier of uPVC glass windows from Puri.
           </p>
           <p className="text-base leading-relaxed text-gray-600 md:text-lg">
-            Our product range spans top hung windows, casement systems, sliding
-            solutions, acoustic upgrades, and custom fabrication for premium
-            residential and commercial spaces.
+            The company is known for quality products and dependable service,
+            helping customers choose practical window solutions for their spaces.
           </p>
         </div>
 

@@ -17,21 +17,21 @@ export default function ServiceHub() {
       title: "Free Consultation",
       icon: <Headphones />,
       description:
-        "Expert advice for your home with our specialized design consultants.",
+        "Helpful guidance for choosing practical uPVC glass window solutions.",
       link: "#",
     },
     {
       title: "Fast Delivery",
       icon: <Truck />,
       description:
-        "On-time delivery guaranteed with our robust logistics network.",
+        "Dependable supply support for customer and project requirements.",
       link: "#",
     },
     {
       title: "Certified Quality",
       icon: <ShieldCheck />,
       description:
-        "Tested for global standards to ensure long-lasting durability.",
+        "Quality-focused products made with attention to finish and durability.",
       link: "#",
     },
     {
@@ -44,7 +44,7 @@ export default function ServiceHub() {
     {
       title: "Post Sales Service",
       icon: <Wrench />,
-      description: "24/7 support for maintenance and hassle-free service.",
+      description: "Dependable service support after product selection and supply.",
       link: "#",
     },
     {
@@ -94,17 +94,14 @@ export default function ServiceHub() {
                 title: (
                   <div className="flex flex-col gap-2">
                     <div className="w-12 h-12 bg-[#362A71]/20 rounded-lg flex items-center justify-center text-[#F85A21] mb-2">
-                      {React.cloneElement(
-                        s.icon as React.ReactElement<any>,
-                        { size: 28 } as any
-                      )}
+                      {React.cloneElement(s.icon, { size: 28 })}
                     </div>
                     <span className="text-white font-bold text-xl uppercase tracking-tight">
                       {s.title}
                     </span>
                   </div>
                 ),
-              })) as any
+              }))
             }
           />
         </div>

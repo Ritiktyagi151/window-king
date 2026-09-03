@@ -1,23 +1,17 @@
 "use client";
 
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence, useScroll, useSpring, Variants } from 'framer-motion';
 import { 
   MapPin, Phone, Clock, CheckCircle2, 
-  MessageSquare, ShieldCheck, Globe, HelpCircle,
-  ChevronDown, Ruler, Building2, Calendar,
-  Truck, PenTool, Headphones, ExternalLink
+  ShieldCheck,
+  ChevronDown, Building2,
+  Headphones, ExternalLink
 } from 'lucide-react';
 
 const ContactPage = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [mounted, setMounted] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
-
-  // Fix for Hydration Error: Client-side only render check
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
@@ -42,17 +36,6 @@ const ContactPage = () => {
       transition: { duration: 0.6, ease: "easeOut" } 
     }
   };
-
-  const staggerContainer: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: { staggerChildren: 0.1 }
-    }
-  };
-
-  // Prevent Hydration Mismatch
-  if (!mounted) return <div className="min-h-screen bg-gray-50" />;
 
   return (
     <div ref={containerRef} className="min-h-screen overflow-x-hidden bg-[#f4f7f9] px-4 pb-16 pt-32 font-sans selection:bg-[#7c3aed] selection:text-white md:px-10 md:pb-20 md:pt-40">
@@ -84,7 +67,7 @@ const ContactPage = () => {
             {/* Floating Info Cards */}
             <div className="absolute left-8 top-1/2 -translate-y-1/2 z-20 bg-white/90 backdrop-blur-xl p-8 rounded-[30px] shadow-xl hidden md:flex flex-col gap-8 w-72 border border-white/50">
               {[
-                { id: 'loc-1', icon: MapPin, t: "Head Office", d: "Window King Plaza, Delhi", c: "text-purple-600" },
+                { id: 'loc-1', icon: MapPin, t: "Location", d: "Puri, India", c: "text-purple-600" },
                 { id: 'ph-1', icon: Phone, t: "Support Line", d: "+91 7065500903", c: "text-orange-500" },
                 { id: 'hrs-1', icon: Clock, t: "Visit Hours", d: "9 AM - 7 PM", c: "text-purple-600" }
               ].map((item) => (
@@ -118,7 +101,7 @@ const ContactPage = () => {
               {!isSubmitted ? (
                 <motion.div key="form" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}>
                   <h2 className="mb-2 text-4xl font-black tracking-tighter text-gray-900 md:text-5xl">Contact <span className="text-purple-600 italic">Us</span></h2>
-                  <p className="text-gray-400 mb-10 text-sm italic underline decoration-orange-500 underline-offset-4">Premium window solutions are just a message away.</p>
+                  <p className="text-gray-400 mb-10 text-sm italic underline decoration-orange-500 underline-offset-4">Quality uPVC glass window solutions are just a message away.</p>
 
                   <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div className="space-y-1">
@@ -133,9 +116,9 @@ const ContactPage = () => {
                       <label className="text-[10px] font-bold text-purple-600 uppercase tracking-widest ml-1">Requirement Type</label>
                       <div className="relative">
                         <select className="w-full p-4 bg-gray-50 border-2 border-transparent rounded-2xl focus:border-purple-500 outline-none appearance-none cursor-pointer text-sm">
-                          <option>uPVC Windows</option>
-                          <option>Aluminium Systems</option>
-                          <option>Glass Partitions</option>
+                          <option>uPVC Window Series</option>
+                          <option>uPVC Door Series</option>
+                          <option>Custom uPVC Design</option>
                         </select>
                         <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" size={18} />
                       </div>
@@ -177,10 +160,10 @@ const ContactPage = () => {
         >
           <div className="flex flex-col justify-center bg-white p-8 md:w-1/3 md:p-12 xl:p-20">
             <h2 className="text-4xl font-black text-gray-900 mb-6 italic">Our <span className="text-orange-500">Showroom</span></h2>
-            <p className="text-gray-500 mb-10 leading-relaxed text-sm">Experience premium quality in person. Visit our Delhi hub for a free consultation.</p>
+            <p className="text-gray-500 mb-10 leading-relaxed text-sm">Established in 2021, WINDOW KING PRIVATE LIMITED is known in Puri for quality uPVC glass windows and dependable service.</p>
             <div className="flex items-start gap-4 text-purple-600">
               <MapPin size={24} />
-              <p className="text-gray-800 font-bold text-sm">Okhla Estate, Phase 3, New Delhi</p>
+              <p className="text-gray-800 font-bold text-sm">Puri, India</p>
             </div>
             <button className="flex items-center gap-2 text-purple-600 font-bold text-sm hover:underline mt-6">
               Get Directions <ExternalLink size={16} />
@@ -188,7 +171,7 @@ const ContactPage = () => {
           </div>
           <div className="h-[320px] md:h-[450px] md:w-2/3">
             <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d112134.425946114!2d77.100985!3d28.563065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390ce3970725359b%3A0xd680327f12e8736a!2sOkhla%20Industrial%20Estate%2C%20New%20Delhi!5e0!3m2!1sen!2sin!4v1642250000000" 
+              src="https://www.google.com/maps?q=Puri%2C%20Odisha%2C%20India&output=embed" 
               className="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-700" 
               loading="lazy" 
             />
@@ -198,9 +181,9 @@ const ContactPage = () => {
         {/* SECTION 3: TRUST CARDS */}
         <div className="mt-16 grid grid-cols-1 gap-8 md:mt-32 md:grid-cols-3">
           {[
-            { id: 't1', icon: ShieldCheck, title: "10 Year Warranty", color: "text-purple-600" },
+            { id: 't1', icon: ShieldCheck, title: "Quality Products", color: "text-purple-600" },
             { id: 't2', icon: Building2, title: "Expert Installation", color: "text-orange-500" },
-            { id: 't3', icon: Headphones, title: "24/7 Support", color: "text-purple-600" }
+            { id: 't3', icon: Headphones, title: "Dependable Service", color: "text-purple-600" }
           ].map((card) => (
             <motion.div 
               key={card.id}
@@ -209,7 +192,7 @@ const ContactPage = () => {
             >
               <card.icon size={40} className={`${card.color} mb-6 mx-auto md:mx-0 group-hover:scale-110 transition-transform`} />
               <h4 className="text-2xl font-black text-gray-900 mb-4 tracking-tighter">{card.title}</h4>
-              <p className="text-gray-500 text-sm leading-relaxed italic italic">Ensuring peak performance and safety for your home.</p>
+              <p className="text-gray-500 text-sm leading-relaxed italic">Focused on practical uPVC glass window solutions for your space.</p>
             </motion.div>
           ))}
         </div>

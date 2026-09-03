@@ -1,20 +1,20 @@
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "motion/react";
 
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 
 export const HoverEffect = ({
   items,
   className,
 }: {
   items: {
-    title: string;
+    title: ReactNode;
     description: string;
     link: string;
   }[];
   className?: string;
 }) => {
-  let [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   return (
     <div

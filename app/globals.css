@@ -14,6 +14,19 @@ body {
   overflow-x: hidden;
 }
 
+.footer-marquee-track {
+  animation: footer-marquee 28s linear infinite;
+}
+
+@keyframes footer-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
 /* Navbar fixed hai isliye body par thoda padding top de sakte hain 
    taki pehla section navbar ke piche na chhup jaye */
 

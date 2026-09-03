@@ -171,9 +171,12 @@ const ContactPage = () => {
           </div>
           <div className="h-[320px] md:h-[450px] md:w-2/3">
             <iframe 
-              src="https://www.google.com/maps?q=Puri%2C%20Odisha%2C%20India&output=embed" 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14255.980432373506!2d86.2260365871582!3d19.986756900000007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a198b3c05d887ef%3A0xaa7524be0134ee38!2sWindow%20King!5e1!3m2!1sen!2sin!4v1788429245161!5m2!1sen!2sin"
               className="w-full h-full border-0 grayscale hover:grayscale-0 transition-all duration-700" 
+              title="Window King location"
+              allowFullScreen
               loading="lazy" 
+              referrerPolicy="strict-origin-when-cross-origin"
             />
           </div>
         </motion.div>

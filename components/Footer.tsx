@@ -92,9 +92,10 @@ export default function Footer() {
           <h3 className="text-xl font-black text-[#10004B]">Useful Links</h3>
           <ul className="mt-6 space-y-5">
             <ContactItem icon={<MapPin size={24} />} href="/contact">
-              WINDOW KING PRIVATE LIMITED
+             
+              PLOT NO -2121, MAIN ROAD, near UKULEI, CHAKA,
               <br />
-              Puri, Odisha, India
+              Astaranga, Kantapada, Odisha 752109
             </ContactItem>
             <ContactItem icon={<Phone size={22} />} href="tel:+917065500903">
               +91 7065500903

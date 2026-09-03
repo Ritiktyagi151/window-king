@@ -2,6 +2,7 @@ import type { Metadata } from "next"; // Metadata type import karein
 import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "@/components/Footer";
+import FooterMarquee from "@/components/FooterMarquee";
 import CookieConsent from "@/components/CookieConsent";
 import NonHomeBanner from "@/components/NonHomeBanner";
 
@@ -37,6 +38,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <NonHomeBanner />
           {children}
         </main> {/* SEO aur structure ke liye main tag behtar hai */}
+        <FooterMarquee />
         <Footer /> 
         <CookieConsent />
       </body>

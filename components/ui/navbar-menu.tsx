@@ -45,7 +45,7 @@ export const MenuItem = ({
         >
           {active === item && (
             // Spacing badhane ke liye top value badhai hai
-            <div className="absolute top-[calc(100%_+_1rem)] left-1/2 transform -translate-x-1/2 pt-4">
+            <div className="absolute top-[calc(100%_+_0.50rem)] left-1/2 transform -translate-x-1/2 pt-2">
               <motion.div
                 transition={transition}
                 layoutId="active"
@@ -96,14 +96,19 @@ export const ProductItem = ({
   description,
   href,
   src,
+  items,
 }: {
   title: string;
   description: string;
   href: string;
   src: string;
+  items?: string[];
 }) => {
   return (
-    <a href={href} className="group grid grid-cols-[180px_1fr] gap-5 rounded-xl p-3 transition-all hover:bg-gray-50">
+    <a
+      href={href}
+      className="group grid grid-cols-[180px_minmax(0,1fr)] gap-5 rounded-xl p-3 transition-all hover:bg-gray-50"
+    >
       <img
         src={src}
         width={180}
@@ -113,12 +118,26 @@ export const ProductItem = ({
       />
       <div className="min-w-0 py-1">
         {/* Title ko brand purple kiya */}
-        <h4 className="text-xl font-bold mb-2 leading-snug text-[#362A71] group-hover:text-[#F85A21] transition-colors">
+        <h4 className="mb-2 whitespace-nowrap text-xl font-bold leading-snug text-[#362A71] transition-colors group-hover:text-[#F85A21]">
           {title}
         </h4>
-        <p className="text-gray-500 text-sm max-w-[15rem] leading-relaxed">
+        <p className="text-sm leading-relaxed text-gray-500">
           {description}
         </p>
+        {items && (
+          <div className="mt-3 max-h-0 overflow-hidden opacity-0 transition-all duration-300 group-hover:max-h-44 group-hover:opacity-100">
+            <div className="grid grid-cols-1 gap-1.5 border-t border-gray-100 pt-3 text-[12px] font-semibold text-[#362A71] sm:grid-cols-2">
+              {items.map((item) => (
+                <span
+                  key={item}
+                  className="rounded-full bg-white px-3 py-1 shadow-sm ring-1 ring-gray-100 transition-colors group-hover:bg-[#F85A21]/10"
+                >
+                  {item}
+                </span>
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     </a>
   );

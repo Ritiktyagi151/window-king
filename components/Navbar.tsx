@@ -103,16 +103,16 @@ export default function Navbar() {
             >
               <div className="grid w-[min(76vw,900px)] grid-cols-1 gap-5 p-4 text-sm lg:grid-cols-2 lg:gap-8">
                 <ProductItem
-                  title="uPVC Window Series"
+                  title="uPVC Window and Door Series"
                   href="/products/upvc"
                   src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-                  description="Sliding, Casement, Fixed, Villa, Bay, Arch, French, and Top Hung designs."
+                  description="uPVC sliding, casement, fixed, villa, bay, arch, French, top hung, and door designs."
                 />
                 <ProductItem
-                  title="uPVC Door Series"
-                  href="/products/upvc-doors"
+                  title="Aluminium Window and Door Series"
+                  href="/products/aluminium"
                   src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6"
-                  description="Sliding, Casement, Slide & Folding, and Lift & Sliding doors."
+                  description="Aluminium window and door systems for homes, offices, and commercial spaces."
                 />
               </div>
             </MenuItem>
@@ -253,13 +253,13 @@ export default function Navbar() {
                 </p>
                 <MobileNavLink
                   href="/products/upvc"
-                  label="uPVC Window Series"
+                  label="uPVC Window and Door Series"
                   onClick={() => setMobileMenuOpen(false)}
                   sub
                 />
                 <MobileNavLink
-                  href="/products/upvc-doors"
-                  label="uPVC Door Series"
+                  href="/products/aluminium"
+                  label="Aluminium Window and Door Series"
                   onClick={() => setMobileMenuOpen(false)}
                   sub
                 />

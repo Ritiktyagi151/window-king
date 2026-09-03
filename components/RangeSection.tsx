@@ -6,10 +6,30 @@ import Link from "next/link";
 
 export default function RangeSection() {
   const categories = [
-    { label: "Sliding Window", href: "/products/upvc" },
-    { label: "Casement Window", href: "/products/upvc" },
-    { label: "Sliding Door", href: "/products/upvc-doors" },
-    { label: "Lift & Sliding Door", href: "/products/upvc-doors" },
+    {
+      title: "uPVC Window and Door Series",
+      href: "/products/upvc",
+      image: "/images/window.png",
+      items: [
+        "uPVC Sliding Window",
+        "uPVC Casement Window",
+        "uPVC Fixed Window",
+        "uPVC Sliding Door",
+        "uPVC Lift And Sliding Door",
+      ],
+    },
+    {
+      title: "Aluminium Window and Door Series",
+      href: "/products/aluminium",
+      image: "/images/istockphoto-547134212-612x612.jpg",
+      items: [
+        "Aluminium Sliding Window",
+        "Aluminium Casement Window",
+        "Aluminium Fixed Window",
+        "Aluminium Sliding Door",
+        "Aluminium Folding Door",
+      ],
+    },
   ];
 
   return (
@@ -57,22 +77,33 @@ export default function RangeSection() {
             </span>
             
             <h2 className="mb-4 text-3xl font-black leading-tight text-[#362A71] sm:text-4xl md:text-5xl">
-              Wide Range <br />
-              <span className="text-gray-400 font-light italic text-2xl md:text-3xl tracking-tight">uPVC Windows & Doors</span>
+              Product Range <br />
+              <span className="text-gray-400 font-light italic text-2xl md:text-3xl tracking-tight">Windows & Doors</span>
             </h2>
             
             <p className="text-gray-500 mb-8 leading-relaxed text-sm md:text-base">
-              Explore Window King uPVC Sliding Windows, Casement Windows,
-              Fixed Windows, Villa Windows, Combination Windows, Tilt & Turn,
-              Bay, Arch, Ventilator, French, Awning / Top Hung designs, plus
-              uPVC door solutions.
+              Explore Window King uPVC Window and Door Series along with
+              Aluminium Window and Door Series for home, office, and commercial
+              openings.
             </p>
 
-            <div className="grid grid-cols-2 gap-3 mb-8">
+            <div className="grid grid-cols-1 gap-4 mb-8">
               {categories.map((cat) => (
-                <Link key={cat.label} href={cat.href} className="group flex items-center justify-between p-3 border border-gray-100 rounded-xl hover:border-[#F85A21] hover:bg-[#F85A21]/5 transition-all cursor-pointer">
-                  <span className="font-bold text-[#362A71] uppercase text-[10px] md:text-xs tracking-wider">{cat.label}</span>
-                  <ArrowUpRight size={14} className="text-[#F85A21] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                <Link key={cat.title} href={cat.href} className="group grid grid-cols-[84px_1fr_auto] items-center gap-4 rounded-xl border border-gray-100 p-3 transition-all hover:border-[#F85A21] hover:bg-[#F85A21]/5">
+                  <img
+                    src={cat.image}
+                    alt={cat.title}
+                    className="h-20 w-20 rounded-lg object-cover"
+                  />
+                  <div className="min-w-0">
+                    <h3 className="text-sm font-black uppercase leading-snug text-[#362A71]">
+                      {cat.title}
+                    </h3>
+                    <p className="mt-2 line-clamp-2 text-xs font-semibold leading-5 text-gray-500">
+                      {cat.items.join(" | ")}
+                    </p>
+                  </div>
+                  <ArrowUpRight size={18} className="text-[#F85A21] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </Link>
               ))}
             </div>

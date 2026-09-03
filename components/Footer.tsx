@@ -17,12 +17,12 @@ import {
 } from "lucide-react";
 
 const usefulLinks = [
-  { label: "Windows", href: "/products/upvc" },
-  { label: "Doors", href: "/products/upvc-doors" },
+  { label: "uPVC Window and Door Series", href: "/products/upvc" },
+  { label: "Aluminium Window and Door Series", href: "/products/aluminium" },
   { label: "Colour Options", href: "/quality" },
   { label: "Blogs", href: "/blog" },
   { label: "Terms & Conditions", href: "/terms" },
-  { label: "Raw Data", href: "/raw-data" },
+  // { label: "Raw Data", href: "/raw-data" },
 ];
 
 const locationLinks = [
@@ -39,15 +39,15 @@ const locationLinks = [
 ];
 
 const socialLinks = [
-  { label: "LinkedIn", icon: Linkedin, href: "#" },
-  { label: "YouTube", icon: Youtube, href: "#" },
-  { label: "Instagram", icon: Instagram, href: "#" },
-  { label: "Facebook", icon: Facebook, href: "#" },
+  { label: "LinkedIn", icon: Linkedin, href: "/contact" },
+  { label: "YouTube", icon: Youtube, href: "/gallery" },
+  { label: "Instagram", icon: Instagram, href: "/gallery" },
+  { label: "Facebook", icon: Facebook, href: "/contact" },
 ];
 
 const quickActions = [
   { label: "Location", icon: MapPin, href: "/contact" },
-  { label: "Brochure", icon: BookOpen, href: "#" },
+  { label: "Brochure", icon: BookOpen, href: "/raw-data" },
   { label: "Enquiry", icon: ClipboardList, href: "/contact" },
 ];
 
@@ -174,7 +174,7 @@ export default function Footer() {
           </div>
 
           <p className="text-center text-sm font-bold text-white/85">
-            &copy;2025. Window King Private Limited. All Rights Reserved.
+            &copy;2026. Window King Private Limited. All Rights Reserved.
           </p>
 
           <p className="text-center text-xs font-semibold text-white/70 md:text-right">

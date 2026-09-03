@@ -103,20 +103,20 @@ export const ProductItem = ({
   src: string;
 }) => {
   return (
-    <a href={href} className="group flex gap-4 rounded-lg p-2 transition-all hover:bg-gray-50">
+    <a href={href} className="group grid grid-cols-[180px_1fr] gap-5 rounded-xl p-3 transition-all hover:bg-gray-50">
       <img
         src={src}
-        width={140}
-        height={70}
+        width={180}
+        height={110}
         alt={title}
-        className="h-[70px] w-[120px] shrink-0 rounded-xl object-cover shadow-md transition-shadow duration-300 group-hover:shadow-xl sm:w-[140px]"
+        className="h-[110px] w-[180px] shrink-0 rounded-xl object-cover shadow-md transition-shadow duration-300 group-hover:shadow-xl"
       />
-      <div>
+      <div className="min-w-0 py-1">
         {/* Title ko brand purple kiya */}
-        <h4 className="text-lg font-bold mb-1 text-[#362A71] group-hover:text-[#F85A21] transition-colors">
+        <h4 className="text-xl font-bold mb-2 leading-snug text-[#362A71] group-hover:text-[#F85A21] transition-colors">
           {title}
         </h4>
-        <p className="text-gray-500 text-sm max-w-[12rem] leading-snug">
+        <p className="text-gray-500 text-sm max-w-[15rem] leading-relaxed">
           {description}
         </p>
       </div>

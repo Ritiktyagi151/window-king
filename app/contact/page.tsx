@@ -116,9 +116,9 @@ const ContactPage = () => {
                       <label className="text-[10px] font-bold text-purple-600 uppercase tracking-widest ml-1">Requirement Type</label>
                       <div className="relative">
                         <select className="w-full p-4 bg-gray-50 border-2 border-transparent rounded-2xl focus:border-purple-500 outline-none appearance-none cursor-pointer text-sm">
-                          <option>uPVC Window Series</option>
-                          <option>uPVC Door Series</option>
-                          <option>Custom uPVC Design</option>
+                          <option>uPVC Window and Door Series</option>
+                          <option>Aluminium Window and Door Series</option>
+                          <option>Custom Design</option>
                         </select>
                         <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 pointer-events-none" size={18} />
                       </div>

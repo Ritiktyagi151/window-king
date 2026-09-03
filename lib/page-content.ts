@@ -62,7 +62,7 @@ export const standalonePages: Record<string, MarketingPageContent> = {
     title: "Innovation Lab",
     description:
       "We combine modern fabrication practices, detail-led engineering, and custom product thinking to solve real design and performance challenges.",
-    primaryCta: { href: "/products/upvc-doors", label: "Explore Door Series" },
+    primaryCta: { href: "/products/aluminium", label: "Explore Aluminium Series" },
     secondaryCta: { href: "/contact", label: "Discuss Project" },
     metrics: [
       { label: "Custom Design", value: "Bespoke" },
@@ -230,7 +230,7 @@ export const standalonePages: Record<string, MarketingPageContent> = {
     title: "Commercial Projects",
     description:
       "Our commercial uPVC glass window solutions focus on reliable supply, practical detailing, and dependable service for project needs.",
-    primaryCta: { href: "/products/upvc-doors", label: "View Door Series" },
+    primaryCta: { href: "/products/aluminium", label: "View Aluminium Series" },
     secondaryCta: { href: "/contact", label: "Discuss Commercial Build" },
     metrics: [
       { label: "Project Types", value: "Mixed" },
@@ -342,32 +342,32 @@ export const standalonePages: Record<string, MarketingPageContent> = {
 export const productPages: Record<string, MarketingPageContent> = {
   upvc: {
     eyebrow: "Products",
-    title: "uPVC Window Series",
+    title: "uPVC Window and Door Series",
     description:
-      "Our qualitative uPVC window range includes sliding, casement, fixed, villa, combination, tilt and turn, bay, arch, ventilator, French, and awning or top hung designs.",
+      "Our qualitative products series consists of uPVC Sliding Window, uPVC Casement Windows, uPVC Sliding Doors, uPVC Casement Doors and lots of other products.",
     primaryCta: { href: "/contact", label: "Get Product Advice" },
     secondaryCta: { href: "/quality", label: "See Quality Focus" },
     metrics: [
       { label: "Window Designs", value: "11" },
+      { label: "Door Designs", value: "4" },
       { label: "Material", value: "uPVC" },
       { label: "Custom Fit", value: "Yes" },
-      { label: "Applications", value: "Home" },
     ],
     pillars: [
       {
-        title: "Complete window range",
+        title: "uPVC Window Series",
         description:
-          "Window King offers practical uPVC window designs for homes, offices, and commercial spaces.",
+          "uPVC Sliding Window, uPVC Casement Window, uPVC Fixed Window, uPVC Villa Window, uPVC Combination Window, uPVC Tilt & Turn Window, uPVC Bay Window, uPVC Arch Window, Ventilator, French Window, and Awning / Top Hung.",
       },
       {
-        title: "Custom design support",
+        title: "uPVC Door Series",
         description:
-          "Customers can ask the Window King expert team for customized designs that fit their opening, usage, and style needs.",
+          "uPVC Sliding Door, uPVC Casement Door, uPVC Slide And Folding Door, and uPVC Lift And Sliding Door.",
       },
       {
-        title: "Quality and service",
+        title: "Customise design support",
         description:
-          "The range is backed by quality-focused manufacturing, dependable supply, and practical customer guidance.",
+          "You can ask Window King Expert Team to make any Customise Design that can fit for your Home, office and Commercial.",
       },
     ],
     highlights: [
@@ -426,43 +426,6 @@ export const productPages: Record<string, MarketingPageContent> = {
         description:
           "Top-hinged window design suited for ventilation with practical weather protection.",
       },
-    ],
-    sourceDocuments: [
-      { title: "Content for B2B Potal", fileName: "Content for B2B Potal.txt" },
-      { title: "Why Choose uPVC", fileName: "Why Choose uPVC.txt" },
-    ],
-  },
-  "upvc-doors": {
-    eyebrow: "Products",
-    title: "uPVC Door Series",
-    description:
-      "Our uPVC door range includes sliding doors, casement doors, slide and folding doors, and lift and sliding doors for homes, offices, and commercial spaces.",
-    primaryCta: { href: "/contact", label: "Discuss Door Design" },
-    secondaryCta: { href: "/products/upvc", label: "View Window Series" },
-    metrics: [
-      { label: "Door Designs", value: "4" },
-      { label: "Material", value: "uPVC" },
-      { label: "Custom Fit", value: "Yes" },
-      { label: "Applications", value: "Wide" },
-    ],
-    pillars: [
-      {
-        title: "Door range",
-        description:
-          "Window King offers practical uPVC door designs for residential, office, and commercial requirements.",
-      },
-      {
-        title: "Customized to fit",
-        description:
-          "The expert team can help customize designs according to the site opening, movement needs, and project style.",
-      },
-      {
-        title: "Quality supply and support",
-        description:
-          "Every door solution is supported by quality-focused product selection and dependable service.",
-      },
-    ],
-    highlights: [
       {
         title: "uPVC Sliding Door",
         description:
@@ -480,6 +443,83 @@ export const productPages: Record<string, MarketingPageContent> = {
       },
       {
         title: "uPVC Lift And Sliding Door",
+        description:
+          "Smooth large-opening door system for premium movement and practical access.",
+      },
+    ],
+    sourceDocuments: [
+      { title: "Content for B2B Potal", fileName: "Content for B2B Potal.txt" },
+      { title: "Why Choose uPVC", fileName: "Why Choose uPVC.txt" },
+    ],
+  },
+  aluminium: {
+    eyebrow: "Products",
+    title: "Aluminium Window and Door Series",
+    description:
+      "Window King Aluminium Window and Door Series offers practical window and door solutions for residential, office, and commercial spaces.",
+    primaryCta: { href: "/contact", label: "Discuss Aluminium Design" },
+    secondaryCta: { href: "/products/upvc", label: "View uPVC Series" },
+    metrics: [
+      { label: "Window & Door", value: "Series" },
+      { label: "Material", value: "Aluminium" },
+      { label: "Custom Fit", value: "Yes" },
+      { label: "Applications", value: "Home" },
+    ],
+    pillars: [
+      {
+        title: "Aluminium window range",
+        description:
+          "Aluminium window designs are suitable for modern homes, offices, and commercial projects where strength, clean lines, and daily usability matter.",
+      },
+      {
+        title: "Aluminium door range",
+        description:
+          "Aluminium door solutions support wide openings, smooth movement, and practical access for different room and facade requirements.",
+      },
+      {
+        title: "Customise design support",
+        description:
+          "You can ask Window King Expert Team to make any Customise Design that can fit for your Home, office and Commercial.",
+      },
+    ],
+    highlights: [
+      {
+        title: "Aluminium Sliding Window",
+        description:
+          "Smooth sliding window design for compact spaces and easy daily operation.",
+      },
+      {
+        title: "Aluminium Casement Window",
+        description:
+          "Side-hinged aluminium window option for ventilation, access, and clean finishing.",
+      },
+      {
+        title: "Aluminium Fixed Window",
+        description:
+          "Fixed aluminium glass panel for daylight, visibility, and modern architectural openings.",
+      },
+      {
+        title: "Aluminium Combination Window",
+        description:
+          "A flexible aluminium window layout combining fixed and openable panels.",
+      },
+      {
+        title: "Aluminium Sliding Door",
+        description:
+          "Space-saving sliding door solution for balconies, rooms, and wider openings.",
+      },
+      {
+        title: "Aluminium Casement Door",
+        description:
+          "Hinged door option for familiar operation, dependable use, and clean finishing.",
+      },
+      {
+        title: "Aluminium Slide And Folding Door",
+        description:
+          "Folding system for openings where flexible access and space management matter.",
+      },
+      {
+        title: "Aluminium Lift And Sliding Door",
         description:
           "Smooth large-opening door system for premium movement and practical access.",
       },

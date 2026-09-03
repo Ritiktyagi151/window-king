@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "../components/Navbar";
 import Footer from "@/components/Footer";
 import CookieConsent from "@/components/CookieConsent";
+import NonHomeBanner from "@/components/NonHomeBanner";
 
 // SEO ke liye Metadata object
 export const metadata: Metadata = {
@@ -32,7 +33,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className="bg-white antialiased"> {/* antialiased se fonts clean dikhte hain */}
         <Navbar /> 
-        <main>{children}</main> {/* SEO aur structure ke liye main tag behtar hai */}
+        <main>
+          <NonHomeBanner />
+          {children}
+        </main> {/* SEO aur structure ke liye main tag behtar hai */}
         <Footer /> 
         <CookieConsent />
       </body>

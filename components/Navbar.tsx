@@ -163,31 +163,31 @@ export default function Navbar() {
             <MenuItem
               setActive={setActive}
               active={active}
-              item="Showcase"
+              item="Projects"
               transparent={!isScrolled}
             >
               <div className="grid w-[min(76vw,900px)] grid-cols-1 gap-5 p-4 text-sm lg:grid-cols-2 lg:gap-8">
                 <ProductItem
-                  title="Residential Showcase"
-                  href="/residential"
+                  title="Residential Projects"
+                  href="/projects/residential"
                   src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d"
                   description="Premium window and door installations for villas, apartments, and modern homes."
                 />
                 <ProductItem
                   title="Commercial Projects"
-                  href="/commercial"
+                  href="/projects/commercial"
                   src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab"
                   description="Clean aluminium and uPVC solutions for offices, showrooms, and business spaces."
                 />
                 <ProductItem
-                  title="Gallery"
-                  href="/gallery"
+                  title="Project Gallery"
+                  href="/projects/gallery"
                   src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3"
                   description="Explore completed Window King work across styles, spaces, and finishes."
                 />
                 <ProductItem
                   title="Completed Projects"
-                  href="/projects"
+                  href="/projects/completed"
                   src="https://images.unsplash.com/photo-1600585152915-d208bec867a1"
                   description="A closer look at finished installations and real spaces transformed by Window King."
                 />
@@ -432,6 +432,42 @@ export default function Navbar() {
                 <MobileNavLink
                   href="/products/aluminium"
                   label="Aluminium Window and Door Series"
+                  onClick={() => setMobileMenuOpen(false)}
+                  sub
+                />
+              </div>
+
+              <div className="space-y-4">
+                <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400">
+                  Projects
+                </p>
+                <MobileNavLink
+                  href="/projects"
+                  label="All Projects"
+                  onClick={() => setMobileMenuOpen(false)}
+                  sub
+                />
+                <MobileNavLink
+                  href="/projects/residential"
+                  label="Residential Projects"
+                  onClick={() => setMobileMenuOpen(false)}
+                  sub
+                />
+                <MobileNavLink
+                  href="/projects/commercial"
+                  label="Commercial Projects"
+                  onClick={() => setMobileMenuOpen(false)}
+                  sub
+                />
+                <MobileNavLink
+                  href="/projects/gallery"
+                  label="Project Gallery"
+                  onClick={() => setMobileMenuOpen(false)}
+                  sub
+                />
+                <MobileNavLink
+                  href="/projects/completed"
+                  label="Completed Projects"
                   onClick={() => setMobileMenuOpen(false)}
                   sub
                 />

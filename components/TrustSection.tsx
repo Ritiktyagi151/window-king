@@ -49,7 +49,7 @@ export default function TrustSection() {
   }, [features]);
 
   return (
-    <section className="mb-12 flex w-full items-center overflow-hidden bg-[#fcfcfc] py-12 md:mb-20 md:min-h-[80vh]">
+    <section className="mb-12 flex w-full items-center overflow-hidden bg-[#fcfcfc]  md:mb-20 md:min-h-[80vh]">
       <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative">
         
         <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-8 relative z-10">

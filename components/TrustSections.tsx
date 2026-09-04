@@ -43,7 +43,7 @@ export default function TrustSections() {
     <div className="bg-white overflow-hidden">
       
       {/* --- SECTION 1: AWARDS & ACCREDITATIONS --- */}
-      <section className="mx-auto max-w-7xl px-4 py-14 md:py-20">
+      {/* <section className="mx-auto max-w-7xl px-4 py-10 md:py-10">
         <div className="mb-10 flex flex-col items-start justify-between gap-4 md:mb-12 md:flex-row md:items-center">
           <motion.h2 
             initial={{ x: -50, opacity: 0 }}
@@ -86,7 +86,7 @@ export default function TrustSections() {
             </motion.div>
           ))}
         </div>
-      </section>
+      </section> */}
 
       {/* --- SECTION 2: CLIENTELE (Infinite Marquee Effect) --- */}
       <section className="py-20 bg-[#362A71] relative overflow-hidden">

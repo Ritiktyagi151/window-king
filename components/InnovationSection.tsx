@@ -8,32 +8,32 @@ export default function InnovationSection() {
     {
       title: "Tested for all Weather",
       desc: "Built to withstand extreme heat, heavy rain, and UV rays.",
-      img: "https://www.shutterstock.com/shutterstock/photos/2695866349/display_1500/stock-photo-french-aluminum-windows-in-the-house-outside-the-window-winter-2695866349.jpg",
+      img: "/images/home-page-img/quality5.png",
       // Desktop par ye box bada dikhega
       size: "h-[300px] sm:h-[360px] md:col-span-2 md:row-span-2 md:h-full", 
     },
     {
       title: "Rain Track System",
       desc: "Patented design for zero water seepage.",
-      img: "https://www.shutterstock.com/shutterstock/photos/2574710117/display_1500/stock-photo-studio-shot-photo-of-cheap-car-on-rainy-track-at-night-with-wind-storm-chaos-with-close-on-wet-glass-2574710117.jpg",
+      img: "/images/home-page-img/quality4.png",
       size: "h-[230px] md:col-span-2 md:row-span-1 md:h-full",
     },
     {
       title: "Hurricane Bar",
       desc: "Reinforced strength for high-wind zones.",
-      img: "https://www.shutterstock.com/shutterstock/photos/2550825415/display_1500/stock-photo-boy-looking-out-the-window-while-there-is-a-hurricane-2550825415.jpg",
+      img: "/images/home-page-img/quality3.png",
       size: "h-[230px] md:col-span-1 md:row-span-1 md:h-full",
     },
     {
       title: "Fusion Joints",
       desc: "Perfectly welded corners for air-tight sealing.",
-      img: "https://www.shutterstock.com/shutterstock/photos/2461974161/display_1500/stock-photo-fast-food-restaurant-with-drive-thru-photo-realistic-modern-architecture-stone-and-light-yellow-2461974161.jpg",
+      img: "/images/home-page-img/quality.png",
       size: "h-[230px] md:col-span-1 md:row-span-1 md:h-full",
     },
   ];
 
   return (
-    <section className="flex w-full flex-col justify-center overflow-hidden bg-white py-14 md:py-16">
+    <section className="flex w-full flex-col justify-center overflow-hidden bg-white pb-8">
       <div className="max-w-7xl mx-auto px-6 w-full h-full flex flex-col">
         
         {/* Header */}
@@ -65,7 +65,7 @@ export default function InnovationSection() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.1 }}
-              className={`relative group overflow-hidden rounded-[2rem] bg-gray-100 border border-gray-50 shadow-sm ${item.size}`}
+              className={`relative group overflow-hidden  bg-gray-100 border border-gray-50 shadow-sm ${item.size}`}
             >
               {/* 'object-cover' ensures the image fills the fixed-size box 
                   without stretching, no matter its original aspect ratio.

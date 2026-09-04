@@ -1,10 +1,6 @@
 import type { Metadata } from "next"; // Metadata type import karein
 import "./globals.css";
-import Navbar from "../components/Navbar";
-import Footer from "@/components/Footer";
-import FooterMarquee from "@/components/FooterMarquee";
-import CookieConsent from "@/components/CookieConsent";
-import NonHomeBanner from "@/components/NonHomeBanner";
+import AppShell from "@/components/AppShell";
 
 // SEO ke liye Metadata object
 export const metadata: Metadata = {
@@ -33,14 +29,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en">
       <body className="bg-white antialiased"> {/* antialiased se fonts clean dikhte hain */}
-        <Navbar /> 
-        <main>
-          <NonHomeBanner />
-          {children}
-        </main> {/* SEO aur structure ke liye main tag behtar hai */}
-        <FooterMarquee />
-        <Footer /> 
-        <CookieConsent />
+        <AppShell>{children}</AppShell>
       </body>
     </html>
   );

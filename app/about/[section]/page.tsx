@@ -10,7 +10,6 @@ import {
 } from "framer-motion";
 
 import HeroSection from "../components/HeroSection";
-import StatsSection from "../components/StatsSection";
 import FactsheetSection from "../components/FactsheetSection";
 import InfrastructureSection from "../components/InfrastructureSection";
 import MentorSection from "../components/MentorSection";
@@ -26,7 +25,6 @@ export default function AboutPage() {
   const scaleY = useSpring(scrollYProgress, { stiffness: 100, damping: 30 });
 
   const sections = [
-    { id: "stats", component: <StatsSection /> },
     { id: "profile", component: <ProfileContent /> },
     { id: "factsheet", component: <FactsheetSection /> },
     { id: "infrastructure", component: <InfrastructureSection /> },

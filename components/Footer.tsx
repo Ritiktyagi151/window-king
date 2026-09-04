@@ -19,10 +19,10 @@ import {
 const usefulLinks = [
   { label: "uPVC Window and Door Series", href: "/products/upvc" },
   { label: "Aluminium Window and Door Series", href: "/products/aluminium" },
-  { label: "Colour Options", href: "/quality" },
+  { label: "About Us", href: "/about" },
   { label: "Blogs", href: "/blog" },
   { label: "Terms & Conditions", href: "/terms" },
-  // { label: "Raw Data", href: "/raw-data" },
+  { label: "Privacy Policy", href: "/privacy" },
 ];
 
 const locationLinks = [

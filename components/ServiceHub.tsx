@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { HoverEffect } from "../components/ui/card-hover-effect";
 import {
   ShieldCheck,
   Truck,
@@ -18,54 +18,52 @@ export default function ServiceHub() {
       icon: <Headphones />,
       description:
         "Helpful guidance for choosing practical uPVC glass window solutions.",
-      link: "#",
     },
     {
       title: "Fast Delivery",
       icon: <Truck />,
       description:
         "Dependable supply support for customer and project requirements.",
-      link: "#",
     },
     {
       title: "Certified Quality",
       icon: <ShieldCheck />,
       description:
         "Quality-focused products made with attention to finish and durability.",
-      link: "#",
     },
     {
       title: "Expert Installation",
       icon: <Settings />,
       description:
         "Precision fitting by trained professionals for a perfect seal.",
-      link: "#",
     },
     {
       title: "Post Sales Service",
       icon: <Wrench />,
       description: "Dependable service support after product selection and supply.",
-      link: "#",
     },
     {
       title: "Premium Finish",
       icon: <Star />,
       description:
         "Elegant designs & wide range of colors to match your interiors.",
-      link: "#",
     },
   ];
 
   return (
-    <section className="relative w-full overflow-hidden bg-[#0a0a0a] py-14 md:py-24">
-      {/* Background Text */}
-      <div className="absolute top-10 left-10 text-[10rem] font-black text-white/[0.02] select-none pointer-events-none hidden md:block">
-        SERVICES
-      </div>
+    <section className="relative isolate w-full overflow-hidden bg-white py-10 md:py-14">
+      <div
+        className="absolute inset-0 -z-20 bg-cover bg-center bg-fixed"
+        style={{
+          backgroundImage: "url('/images/pexels-pixabay-247763.jpg')",
+        }}
+      />
+      <div className="absolute inset-0 -z-10 bg-white/40" />
+      {/* <div className="absolute inset-0 -z-10 bg-[linear-gradient(115deg,rgba(255,255,255,0.96),rgba(255,255,255,0.82),rgba(248,90,33,0.18))]" /> */}
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
         {/* Header */}
-        <div className="mb-8 text-center md:mb-12">
+        <div className="mb-6 text-center md:mb-8">
           <motion.span
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -77,33 +75,39 @@ export default function ServiceHub() {
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            className="mt-4 text-3xl font-black uppercase text-white sm:text-4xl md:text-6xl"
+            className="mt-3 text-3xl font-black uppercase text-[#362A71] sm:text-4xl md:text-5xl"
           >
             Why Choose <span className="text-[#F85A21]">Window King?</span>
           </motion.h2>
 
-          <div className="h-1.5 w-32 bg-[#F85A21] mx-auto mt-6 rounded-full" />
+          <div className="mx-auto mt-4 h-1.5 w-24 rounded-full bg-[#F85A21]" />
+          <p className="mx-auto mt-4 max-w-2xl text-sm font-medium leading-6 text-gray-600">
+            Practical guidance, precision manufacturing, and dependable service
+            for uPVC and aluminium window projects.
+          </p>
         </div>
 
-        {/* Hover Cards */}
-        <div className="max-w-7xl mx-auto">
-          <HoverEffect
-            items={
-              services.map((s) => ({
-                ...s,
-                title: (
-                  <div className="flex flex-col gap-2">
-                    <div className="w-12 h-12 bg-[#362A71]/20 rounded-lg flex items-center justify-center text-[#F85A21] mb-2">
-                      {React.cloneElement(s.icon, { size: 28 })}
-                    </div>
-                    <span className="text-white font-bold text-xl uppercase tracking-tight">
-                      {s.title}
-                    </span>
-                  </div>
-                ),
-              }))
-            }
-          />
+        <div className="mx-auto grid max-w-7xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {services.map((service, index) => (
+            <motion.article
+              key={service.title}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.25 }}
+              transition={{ delay: index * 0.06 }}
+            className="group min-h-[180px] rounded-xl border border-white/80 bg-white/88 p-5 shadow-xl shadow-[#362A71]/10 backdrop-blur-md transition-all hover:-translate-y-1 hover:border-[#F85A21]/40 hover:bg-white"
+          >
+              <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-lg bg-[#362A71] text-[#F85A21] shadow-lg transition-colors group-hover:bg-[#F85A21] group-hover:text-white">
+                {React.cloneElement(service.icon, { size: 23 })}
+              </div>
+              <h3 className="text-lg font-black uppercase tracking-tight text-[#362A71]">
+                {service.title}
+              </h3>
+              <p className="mt-3 text-sm font-medium leading-6 text-gray-600">
+                {service.description}
+              </p>
+            </motion.article>
+          ))}
         </div>
 
         {/* Bottom Action */}
@@ -111,11 +115,14 @@ export default function ServiceHub() {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
-          className="mt-10 text-center"
+          className="mt-7 text-center"
         >
-          <button className="w-full rounded-xl bg-[#F85A21] px-8 py-4 font-black text-white shadow-xl transition-all hover:bg-white hover:text-[#362A71] sm:w-auto sm:px-12">
+          <Link
+            href="/quality"
+            className="inline-flex w-full justify-center rounded-xl bg-[#F85A21] px-8 py-3 text-sm font-black text-white shadow-xl shadow-[#F85A21]/20 transition-all hover:bg-[#362A71] sm:w-auto sm:px-10"
+          >
             KNOW MORE ABOUT US
-          </button>
+          </Link>
         </motion.div>
       </div>
     </section>

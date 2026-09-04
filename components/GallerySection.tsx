@@ -14,16 +14,16 @@ import "swiper/css/effect-fade";
 
 const GallerySection = () => {
   const sliderImages = [
-    { url: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c", title: "Luxury Living Room" },
-    { url: "https://images.unsplash.com/photo-1600607687940-4e524cb35d03", title: "Modern Kitchen Design" },
-    { url: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0", title: "Elegant Glass Windows" },
+    { url: "/images/our-masterpieces/masterslide2.png", title: "" },
+    { url: "/images/our-masterpieces/masterslide4.png", title: "" },
+    { url: "/images/our-masterpieces/masterslider3.png", title: "" },
   ];
 
   const gridImages = [
-    { id: 1, url: "https://www.shutterstock.com/shutterstock/photos/2687378145/display_1500/stock-photo-outdoor-photo-of-a-luxurious-desert-home-nestles-gently-into-the-picturesque-rocky-desert-mountain-2687378145.jpg", size: "md:col-span-2 md:row-span-2", title: "Architectural Marvel" },
-    { id: 2, url: "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6", size: "", title: "Interior Details" },
-    { id: 3, url: "https://images.unsplash.com/photo-1484154218962-a197022b5858", size: "", title: "Minimalist Style" },
-    { id: 4, url: "https://images.unsplash.com/photo-1584622650111-993a426fbf0a", size: "md:col-span-2", title: "Premium Finishes" },
+    { id: 1, url: "/images/our-masterpieces/master1.png", size: "md:col-span-2 md:row-span-2", title: "Architectural Marvel" },
+    { id: 2, url: "/images/our-masterpieces/master2.png", size: "", title: "Interior Details" },
+    { id: 3, url: "/images/our-masterpieces/master3.png", size: "", title: "Minimalist Style" },
+    { id: 4, url: "/images/our-masterpieces/masterpiece4.png", size: "md:col-span-2", title: "Premium Finishes" },
   ];
 
   return (

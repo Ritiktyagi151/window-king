@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import VirtualShowroomTour from "./VirtualShowroomTour";
 
 const slides = [
   "/images/banner/banner1.png",
@@ -35,6 +36,14 @@ export default function HeroBanner() {
           style={{ backgroundImage: `url('${slide}')` }}
         />
       ))}
+
+      <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
+
+      <div className="absolute bottom-10 left-0 right-0 z-10 px-6 sm:bottom-14">
+        <div className="mx-auto flex max-w-7xl justify-center sm:justify-start">
+          <VirtualShowroomTour />
+        </div>
+      </div>
     </section>
   );
 }

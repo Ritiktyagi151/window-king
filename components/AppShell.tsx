@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import FooterMarquee from "@/components/FooterMarquee";
 import CookieConsent from "@/components/CookieConsent";
 import NonHomeBanner from "@/components/NonHomeBanner";
+import FloatingWhatsapp from "@/components/FloatingWhatsapp";
 
 export default function AppShell({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -25,6 +26,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
       </main>
       <FooterMarquee />
       <Footer />
+      <FloatingWhatsapp />
       <CookieConsent />
     </>
   );

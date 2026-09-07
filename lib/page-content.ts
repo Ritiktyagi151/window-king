@@ -460,10 +460,10 @@ export const productPages: Record<string, MarketingPageContent> = {
     primaryCta: { href: "/contact", label: "Discuss Aluminium Design" },
     secondaryCta: { href: "/products/upvc", label: "View uPVC Series" },
     metrics: [
-      { label: "Window & Door", value: "Series" },
+      { label: "Window Designs", value: "11" },
+      { label: "Door Designs", value: "4" },
       { label: "Material", value: "Aluminium" },
       { label: "Custom Fit", value: "Yes" },
-      { label: "Applications", value: "Home" },
     ],
     pillars: [
       {
@@ -502,6 +502,41 @@ export const productPages: Record<string, MarketingPageContent> = {
         title: "Aluminium Combination Window",
         description:
           "A flexible aluminium window layout combining fixed and openable panels.",
+      },
+      {
+        title: "Aluminium Villa Window",
+        description:
+          "A refined aluminium window choice for villas and larger residential openings.",
+      },
+      {
+        title: "Aluminium Tilt & Turn Window",
+        description:
+          "Flexible aluminium window system that supports controlled ventilation and easy access.",
+      },
+      {
+        title: "Aluminium Bay Window",
+        description:
+          "Projecting aluminium window style that adds openness, light, and visual character.",
+      },
+      {
+        title: "Aluminium Arch Window",
+        description:
+          "Curved aluminium window design for decorative and architectural openings.",
+      },
+      {
+        title: "Aluminium Ventilator",
+        description:
+          "Compact aluminium ventilation solution for utility areas, bathrooms, and service spaces.",
+      },
+      {
+        title: "Aluminium French Window",
+        description:
+          "Classic full-height aluminium window style for elegant openings and better outdoor connection.",
+      },
+      {
+        title: "Aluminium Awning / Top Hung",
+        description:
+          "Top-hinged aluminium window design suited for ventilation with practical weather protection.",
       },
       {
         title: "Aluminium Sliding Door",

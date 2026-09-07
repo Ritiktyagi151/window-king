@@ -1,7 +1,10 @@
 "use client";
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { MoveRight } from "lucide-react";
+
+const MotionLink = motion(Link);
 
 export default function InnovationSection() {
   const innovations = [
@@ -49,12 +52,13 @@ export default function InnovationSection() {
             </h2>
           </motion.div>
           
-          <motion.button 
+          <MotionLink
+            href="/innovation"
             whileHover={{ scale: 1.05 }}
             className="group flex w-full items-center justify-center gap-3 rounded-full bg-[#362A71] px-6 py-3 text-xs font-bold text-white transition-all hover:bg-[#F85A21] sm:w-auto md:px-8 md:text-sm"
           >
             EXPLORE TECHNOLOGY <MoveRight size={18} className="group-hover:translate-x-2 transition-transform" />
-          </motion.button>
+          </MotionLink>
         </div>
 
         {/* Bento Grid - Box sizes are fixed regardless of image dimensions */}

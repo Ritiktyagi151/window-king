@@ -30,6 +30,14 @@ const bannerContent: Record<
     image: "/images/our-masterpieces/masterslide2.png",
     previewImage: "/images/our-masterpieces/masterpiece4.png",
   },
+  blog: {
+    eyebrow: "Window King Blogs",
+    title: "Blogs",
+    description:
+      "Read practical ideas for selecting uPVC windows, aluminium doors, natural light, space-saving systems, and modern home comfort.",
+    image: "/images/banner/banner3.png",
+    previewImage: "/images/home-page-img/quality4.png",
+  },
   "privacy-policy": {
     eyebrow: "Window King",
     title: "Privacy Policy",

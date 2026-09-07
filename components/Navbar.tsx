@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import {
   BookOpen,
   CheckCircle2,
@@ -19,7 +20,141 @@ import {
   MenuItem,
   ProductItem,
 } from "../components/ui/navbar-menu";
+import { productPages, standalonePages } from "@/lib/page-content";
+import { slugifyProduct } from "@/lib/product-shared";
+import { projectCategories } from "@/lib/projects";
+import { blogPosts } from "@/lib/blogs";
 import { cn } from "@/lib/utils";
+
+const productDropdownCards = [
+  {
+    category: "upvc",
+    title: "uPVC Window and Door Series",
+    href: "/products/upvc",
+    src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c",
+    description:
+      "uPVC sliding, casement, fixed, villa, bay, arch, French, top hung, and door designs.",
+  },
+  {
+    category: "aluminium",
+    title: "Aluminium Window and Door Series",
+    href: "/products/aluminium",
+    src: "https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6",
+    description:
+      "Aluminium window and door systems for homes, offices, and commercial spaces.",
+  },
+] as const;
+
+function getProductDropdownGroups(category: keyof typeof productPages) {
+  const products = productPages[category].highlights;
+  const productLink = (title: string) =>
+    `/products/${category}/${slugifyProduct(title)}`;
+  const cleanLabel = (title: string) =>
+    title.replace(/^uPVC\s+|^Aluminium\s+/i, "");
+
+  return [
+    {
+      title: "Window",
+      items: products
+        .filter((item) => {
+          const title = item.title.toLowerCase();
+          return (
+            title.includes("window") ||
+            title.includes("ventilator") ||
+            title.includes("awning")
+          );
+        })
+        .map((item) => ({
+          label: cleanLabel(item.title),
+          href: productLink(item.title),
+        })),
+    },
+    {
+      title: "Door",
+      items: products
+        .filter((item) => item.title.toLowerCase().includes("door"))
+        .map((item) => ({
+          label: cleanLabel(item.title),
+          href: productLink(item.title),
+        })),
+    },
+  ];
+}
+
+type SearchEntry = {
+  title: string;
+  href: string;
+  group: string;
+  keywords: string;
+};
+
+const searchEntries: SearchEntry[] = [
+  { title: "Home", href: "/", group: "Page", keywords: "home window king" },
+  {
+    title: "Contact Us",
+    href: "/contact",
+    group: "Page",
+    keywords: "contact enquiry phone location address",
+  },
+  {
+    title: "Blogs",
+    href: "/blog",
+    group: "Page",
+    keywords: "blog articles guide windows doors",
+  },
+  {
+    title: "Virtual Tour",
+    href: "/virtual-tour",
+    group: "Page",
+    keywords: "virtual showroom 360 tour",
+  },
+  ...Object.entries(standalonePages).map(([slug, page]) => ({
+    title: page.title,
+    href: `/${slug}`,
+    group: "Page",
+    keywords: `${page.title} ${page.description}`,
+  })),
+  ...Object.entries(productPages).flatMap(([category, page]) => [
+    {
+      title: page.title,
+      href: `/products/${category}`,
+      group: "Product Series",
+      keywords: `${page.title} ${page.description}`,
+    },
+    ...page.highlights.map((product) => ({
+      title: product.title,
+      href: `/products/${category}/${slugifyProduct(product.title)}`,
+      group: "Product",
+      keywords: `${product.title} ${product.description} ${page.title}`,
+    })),
+  ]),
+  ...projectCategories.map((project) => ({
+    title: project.title,
+    href: `/projects/${project.slug}`,
+    group: "Project",
+    keywords: `${project.title} ${project.description} ${project.stats.join(" ")}`,
+  })),
+  ...blogPosts.map((post) => ({
+    title: post.title,
+    href: `/blog/${post.slug}`,
+    group: "Blog",
+    keywords: `${post.title} ${post.excerpt} ${post.category}`,
+  })),
+];
+
+function filterSearchEntries(query: string) {
+  const normalizedQuery = query.trim().toLowerCase();
+
+  if (!normalizedQuery) return [];
+
+  return searchEntries
+    .filter((entry) =>
+      `${entry.title} ${entry.group} ${entry.keywords}`
+        .toLowerCase()
+        .includes(normalizedQuery)
+    )
+    .slice(0, 6);
+}
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -118,32 +253,16 @@ export default function Navbar() {
               transparent={!isScrolled}
             >
               <div className="grid w-[min(90vw,1120px)] grid-cols-1 gap-5 p-4 text-sm lg:grid-cols-2 lg:gap-8">
-                <ProductItem
-                  title="uPVC Window and Door Series"
-                  href="/products/upvc"
-                  src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c"
-                  description="uPVC sliding, casement, fixed, villa, bay, arch, French, top hung, and door designs."
-                  items={[
-                    "Sliding Window",
-                    "Casement Window",
-                    "Fixed Window",
-                    "Sliding Door",
-                    "Lift And Sliding Door",
-                  ]}
-                />
-                <ProductItem
-                  title="Aluminium Window and Door Series"
-                  href="/products/aluminium"
-                  src="https://images.unsplash.com/photo-1502005229762-cf1b2da7c5d6"
-                  description="Aluminium window and door systems for homes, offices, and commercial spaces."
-                  items={[
-                    "Sliding Window",
-                    "Casement Window",
-                    "Fixed Window",
-                    "Sliding Door",
-                    "Folding Door",
-                  ]}
-                />
+                {productDropdownCards.map((card) => (
+                  <ProductItem
+                    key={card.category}
+                    title={card.title}
+                    href={card.href}
+                    src={card.src}
+                    description={card.description}
+                    itemGroups={getProductDropdownGroups(card.category)}
+                  />
+                ))}
               </div>
             </MenuItem>
 
@@ -201,34 +320,7 @@ export default function Navbar() {
         </div>
 
         <div className="col-start-3 row-span-2 flex items-center justify-end gap-2 self-center lg:row-start-2 lg:row-span-1 lg:self-start xl:self-center">
-          <form
-            onSubmit={(event) => event.preventDefault()}
-            className={cn(
-              "hidden h-10 w-[285px] items-center rounded-full border pl-4 pr-1 shadow-lg backdrop-blur-md transition-all duration-300 lg:flex",
-              isScrolled
-                ? "border-gray-50 bg-white/80"
-                : "border-white/20 bg-white/10"
-            )}
-          >
-            <input
-              type="search"
-              aria-label="Search products"
-              placeholder='Search "spices exp'
-              className={cn(
-                "min-w-0 flex-1 bg-transparent text-sm outline-none",
-                isScrolled
-                  ? "text-[#362A71] placeholder:text-gray-500"
-                  : "text-white placeholder:text-white/85"
-              )}
-            />
-            <button
-              type="submit"
-              aria-label="Search"
-              className="ml-1 grid h-8 w-8 shrink-0 place-items-center rounded-full bg-[#F85A21] text-white transition-colors hover:bg-[#362A71]"
-            >
-              <Search size={16} strokeWidth={3} />
-            </button>
-          </form>
+          <SearchBox isScrolled={isScrolled} className="hidden lg:block" />
 
           <button
             type="button"
@@ -389,6 +481,12 @@ export default function Navbar() {
             </div>
 
             <div className="flex-1 space-y-6 overflow-y-auto p-6">
+              <SearchBox
+                isScrolled
+                onNavigate={() => setMobileMenuOpen(false)}
+                className="xl:hidden"
+              />
+
               <MobileNavLink
                 href="/"
                 label="Home"
@@ -492,6 +590,99 @@ export default function Navbar() {
         </>
       )}
     </header>
+  );
+}
+
+function SearchBox({
+  isScrolled,
+  onNavigate,
+  className,
+}: {
+  isScrolled: boolean;
+  onNavigate?: () => void;
+  className?: string;
+}) {
+  const router = useRouter();
+  const [query, setQuery] = useState("");
+  const [isFocused, setIsFocused] = useState(false);
+  const results = filterSearchEntries(query);
+  const showResults = isFocused && query.trim().length > 0;
+
+  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const target = results[0] ?? searchEntries[0];
+
+    setIsFocused(false);
+    setQuery("");
+    onNavigate?.();
+    router.push(target.href);
+  };
+
+  return (
+    <div className={cn("relative w-full lg:w-[285px]", className)}>
+      <form
+        onSubmit={handleSubmit}
+        className={cn(
+          "flex h-11 w-full items-center rounded-full border pl-4 pr-1 shadow-lg backdrop-blur-md transition-all duration-300 lg:h-10",
+          isScrolled
+            ? "border-gray-50 bg-white/90"
+            : "border-white/20 bg-white/10"
+        )}
+      >
+        <input
+          type="search"
+          aria-label="Search Window King"
+          value={query}
+          onChange={(event) => setQuery(event.target.value)}
+          onFocus={() => setIsFocused(true)}
+          onBlur={() => window.setTimeout(() => setIsFocused(false), 120)}
+          placeholder="Search products, blogs, projects"
+          className={cn(
+            "min-w-0 flex-1 bg-transparent text-sm outline-none",
+            isScrolled
+              ? "text-[#362A71] placeholder:text-gray-500"
+              : "text-white placeholder:text-white/85"
+          )}
+        />
+        <button
+          type="submit"
+          aria-label="Search"
+          className="ml-1 grid h-9 w-9 shrink-0 place-items-center rounded-full bg-[#F85A21] text-white transition-colors hover:bg-[#362A71] lg:h-8 lg:w-8"
+        >
+          <Search size={16} strokeWidth={3} />
+        </button>
+      </form>
+
+      {showResults ? (
+        <div className="absolute left-0 right-0 top-[calc(100%+0.5rem)] z-[90] overflow-hidden rounded-xl border border-[#362A71]/10 bg-white shadow-2xl">
+          {results.length > 0 ? (
+            results.map((result) => (
+              <Link
+                key={result.href}
+                href={result.href}
+                onClick={() => {
+                  setQuery("");
+                  setIsFocused(false);
+                  onNavigate?.();
+                }}
+                className="block border-b border-gray-100 px-4 py-3 last:border-b-0 hover:bg-[#F85A21]/5"
+              >
+                <span className="block text-[10px] font-black uppercase tracking-wider text-[#F85A21]">
+                  {result.group}
+                </span>
+                <span className="mt-1 block text-sm font-bold leading-snug text-[#362A71]">
+                  {result.title}
+                </span>
+              </Link>
+            ))
+          ) : (
+            <div className="px-4 py-3 text-sm font-semibold text-[#362A71]/70">
+              No results found
+            </div>
+          )}
+        </div>
+      ) : null}
+    </div>
   );
 }
 

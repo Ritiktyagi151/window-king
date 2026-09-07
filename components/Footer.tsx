@@ -26,16 +26,14 @@ const usefulLinks = [
 ];
 
 const locationLinks = [
-  "Puri",
-  "Bhubaneswar",
-  "Cuttack",
-  "Konark",
-  "Khurda",
-  "Balasore",
-  "Rourkela",
-  "Sambalpur",
-  "Berhampur",
-  "More Location",
+  "Delhi",
+  "Mumbai",
+  "Bengaluru",
+  "Hyderabad",
+  "Chennai",
+  "Pune",
+  "Ahmedabad",
+  "Noida",
 ];
 
 const socialLinks = [
@@ -148,15 +146,22 @@ export default function Footer() {
 
       <div className="relative z-10 mx-auto max-w-7xl px-5 pb-12 sm:px-6">
         <h3 className="text-2xl font-black text-[#0f2140]">Location Links</h3>
-        <div className="mt-6 flex flex-wrap gap-y-4 text-sm font-semibold text-[#10004B]">
-          {locationLinks.map((location) => (
-            <Link
-              key={location}
-              href="/contact"
-              className="border-[#10004B]/45 pr-5 transition-colors hover:text-[#F85A21] [&:not(:last-child)]:mr-5 [&:not(:last-child)]:border-r"
-            >
-              {location}
-            </Link>
+        <div className="mt-6 flex flex-wrap items-center gap-y-4 text-sm font-semibold text-[#10004B]">
+          {locationLinks.map((location, index) => (
+            <span key={location} className="flex items-center">
+              <Link
+                href="/contact"
+                className="transition-colors hover:text-[#F85A21]"
+              >
+                {location}
+              </Link>
+              {index < locationLinks.length - 1 ? (
+                <span
+                  aria-hidden="true"
+                  className="mx-5 h-4 w-px bg-[#10004B]/45"
+                />
+              ) : null}
+            </span>
           ))}
         </div>
       </div>

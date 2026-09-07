@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay, EffectFade } from "swiper/modules";
 import { motion } from "framer-motion";
@@ -62,9 +63,12 @@ const GallerySection = () => {
                       className="px-4 text-center text-white"
                     >
                       <h3 className="mb-4 text-3xl font-bold sm:text-4xl md:text-5xl">{img.title}</h3>
-                      <button className="bg-[#F85A21] px-6 py-2 rounded-full font-bold flex items-center gap-2 mx-auto hover:bg-[#362A71] transition-colors">
+                      <Link
+                        href="/projects/gallery"
+                        className="mx-auto flex items-center gap-2 rounded-full bg-[#F85A21] px-6 py-2 font-bold transition-colors hover:bg-[#362A71]"
+                      >
                         View Project <ArrowRight size={18} />
-                      </button>
+                      </Link>
                     </motion.div>
                   </div>
                 </div>

@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { ShieldCheck, Zap, Wind, VolumeX, Droplets } from "lucide-react";
 
@@ -143,9 +144,12 @@ export default function TrustSection() {
               ))}
             </div>
 
-            <button className="w-full py-4 bg-[#F85A21] text-white font-black rounded-2xl hover:bg-[#362A71] transition-all shadow-lg shadow-[#F85A21]/20">
+            <Link
+              href="/quality"
+              className="w-full rounded-2xl bg-[#F85A21] py-4 text-center font-black text-white shadow-lg shadow-[#F85A21]/20 transition-all hover:bg-[#362A71]"
+            >
               EXPLORE ALL FEATURES
-            </button>
+            </Link>
           </motion.div>
 
         </div>

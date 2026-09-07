@@ -1,33 +1,8 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Trophy, Star, Award } from "lucide-react";
-
-// --- AWARDS DATA ---
-const awards = [
-  {
-    id: 1,
-    img: "https://via.placeholder.com/100", // Apne awards logo yahan lagayein
-    title: "Superbrands India 2025-26",
-    desc: "Consumer Validated",
-    icon: <Trophy className="text-yellow-500" />
-  },
-  {
-    id: 2,
-    img: "https://via.placeholder.com/100",
-    title: "Most Preferred Brand 2025-26",
-    desc: "Windows and Doors Category",
-    icon: <Star className="text-orange-500" />
-  },
-  {
-    id: 3,
-    img: "https://via.placeholder.com/100",
-    title: "Iconic Brand of India 2025",
-    desc: "By ET Now",
-    icon: <Award className="text-blue-500" />
-  },
-];
 
 // --- CLIENTS DATA ---
 const clients = [
@@ -98,9 +73,12 @@ export default function TrustSections() {
             <h2 className="text-3xl font-black uppercase tracking-tighter sm:text-4xl">Our <span className="text-[#F85A21]">Clientele</span></h2>
             <p className="text-gray-300 mt-2">Known in Puri for quality uPVC glass windows and dependable service.</p>
           </div>
-          <button className="text-[#F85A21] border-2 border-[#F85A21] px-6 py-2 rounded-full font-bold hover:bg-[#F85A21] hover:text-white transition-all text-sm">
+          <Link
+            href="/projects"
+            className="rounded-full border-2 border-[#F85A21] px-6 py-2 text-sm font-bold text-[#F85A21] transition-all hover:bg-[#F85A21] hover:text-white"
+          >
             VIEW ALL
-          </button>
+          </Link>
         </div>
 
         {/* LOGO MARQUEE */}

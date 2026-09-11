@@ -225,7 +225,7 @@ export default function ProfileSection() {
   return (
     <section
       id="profile"
-      className="relative isolate overflow-hidden bg-[#f7f7f8] pb-14 pt-16 scroll-mt-12 sm:pt-20 md:pb-20"
+      className="relative isolate overflow-hidden bg-[#f7f7f8] pb-12 pt-12 scroll-mt-24 sm:pt-20 md:pb-20"
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6">
         <div className="grid items-start gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:gap-14">
@@ -235,10 +235,10 @@ export default function ProfileSection() {
             viewport={{ once: true, amount: 0.3 }}
             className="pt-4 text-[#362A71] lg:pt-10"
           >
-            <p className="text-xs font-black uppercase tracking-[0.35em] text-[#F85A21]">
+            <p className="text-xs font-black uppercase tracking-[0.18em] text-[#F85A21] sm:tracking-[0.35em]">
               About Window King
             </p>
-            <h1 className="mt-5 text-4xl font-black uppercase leading-none sm:text-5xl md:text-6xl">
+            <h1 className="mt-4 text-3xl font-black uppercase leading-tight text-[#362A71] sm:mt-5 sm:text-5xl sm:leading-none md:text-6xl">
               Built For Better Openings
             </h1>
             <p className="mt-6 max-w-2xl text-base font-medium leading-8 text-gray-600 md:text-lg">
@@ -253,7 +253,7 @@ export default function ProfileSection() {
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true, amount: 0.25 }}
             transition={{ duration: 0.7 }}
-            className="relative h-[360px] overflow-hidden rounded-2xl shadow-2xl md:h-[520px]"
+            className="relative h-[280px] overflow-hidden rounded-2xl shadow-2xl sm:h-[360px] md:h-[520px]"
           >
             <Image
               src="/images/banner/banner2.png"
@@ -264,7 +264,7 @@ export default function ProfileSection() {
               className="object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-transparent to-transparent" />
-            <div className="absolute bottom-5 left-5 rounded-xl bg-white/90 p-4 shadow-xl backdrop-blur-md">
+            <div className="absolute bottom-4 left-4 rounded-xl bg-white/90 p-4 shadow-xl backdrop-blur-md sm:bottom-5 sm:left-5">
               <p className="text-3xl font-black leading-none text-[#362A71]">
                 2021
               </p>
@@ -299,10 +299,10 @@ export default function ProfileSection() {
           <div className="rounded-2xl bg-[#362A71] p-6 text-white shadow-xl md:p-8">
             <div className="flex items-start justify-between gap-4">
               <div>
-                <p className="text-xs font-bold uppercase tracking-[0.3em] text-[#F85A21]">
+                <p className="text-xs font-bold uppercase tracking-[0.18em] text-[#F85A21] sm:tracking-[0.3em]">
                   Company Profile
                 </p>
-                <h2 className="mt-3 text-3xl font-black uppercase">
+                <h2 className="mt-3 text-2xl font-black uppercase leading-tight sm:text-3xl">
                   Quality Products. Dependable Service.
                 </h2>
               </div>
@@ -318,10 +318,10 @@ export default function ProfileSection() {
 
       <div className="mx-auto mt-14 max-w-7xl px-4 sm:px-6 md:mt-20">
         <div className="mb-10 max-w-3xl">
-          <p className="text-xs font-black uppercase tracking-[0.35em] text-[#F85A21]">
+          <p className="text-xs font-black uppercase tracking-[0.18em] text-[#F85A21] sm:tracking-[0.35em]">
             About Us Content
           </p>
-          <h2 className="mt-3 text-3xl font-black uppercase text-[#362A71] sm:text-5xl">
+          <h2 className="mt-3 text-3xl font-black uppercase leading-tight text-[#362A71] sm:text-5xl">
             Divided Into Clear Sections
           </h2>
           <p className="mt-4 text-base leading-7 text-gray-600">
@@ -347,7 +347,7 @@ export default function ProfileSection() {
               >
                 <motion.div
                   variants={imageReveal}
-                  className={`relative min-h-[280px] sm:min-h-[360px] ${
+                  className={`relative min-h-[230px] sm:min-h-[360px] ${
                     imageFirst ? "lg:order-2" : ""
                   }`}
                 >
@@ -373,13 +373,13 @@ export default function ProfileSection() {
                   </motion.div>
                   <motion.p
                     variants={fadeUp}
-                    className="text-xs font-black uppercase tracking-[0.28em] text-[#F85A21]"
+                    className="text-xs font-black uppercase tracking-[0.16em] text-[#F85A21] sm:tracking-[0.28em]"
                   >
                     {section.eyebrow}
                   </motion.p>
                   <motion.h3
                     variants={fadeUp}
-                    className="mt-3 text-3xl font-black uppercase text-[#362A71]"
+                    className="mt-3 text-2xl font-black uppercase leading-tight text-[#362A71] sm:text-3xl"
                   >
                     {section.title}
                   </motion.h3>
@@ -394,7 +394,7 @@ export default function ProfileSection() {
                       <motion.div
                         key={point}
                         variants={fadeUp}
-                        className="flex items-start gap-3 rounded-xl bg-[#f7f7f8] p-4"
+                        className="flex items-start gap-3 rounded-xl bg-[#f7f7f8] p-3 sm:p-4"
                       >
                         <CheckCircle2
                           size={18}

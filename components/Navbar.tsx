@@ -188,10 +188,10 @@ export default function Navbar() {
           : "bg-transparent"
       )}
     >
-      <div className="relative z-10 mx-auto grid max-w-[1400px] grid-cols-[180px_1fr_auto] items-center gap-x-4 gap-y-1 px-5 py-2 sm:grid-cols-[220px_1fr_auto] sm:px-6 lg:grid-cols-[260px_1fr_auto] xl:grid-cols-[300px_1fr_auto]">
+      <div className="relative z-10 mx-auto grid max-w-[1400px] grid-cols-[minmax(0,1fr)_auto] items-center gap-x-3 px-4 py-2 sm:grid-cols-[220px_1fr_auto] sm:px-6 lg:grid-cols-[260px_1fr_auto] xl:grid-cols-[300px_1fr_auto]">
         <Link
           href="/"
-          className="relative z-20 col-start-1 row-span-2 block h-14 w-36 shrink-0 self-center sm:h-16 sm:w-44 lg:h-20 lg:w-52 xl:h-24 xl:w-60"
+          className="relative z-20 col-start-1 block h-14 w-36 shrink-0 self-center sm:row-span-2 sm:h-16 sm:w-44 lg:h-20 lg:w-52 xl:h-24 xl:w-60"
         >
           <Image
             src="/window-king-logo.png"
@@ -319,7 +319,7 @@ export default function Navbar() {
           </Menu>
         </div>
 
-        <div className="col-start-3 row-span-2 flex items-center justify-end gap-2 self-center lg:row-start-2 lg:row-span-1 lg:self-start xl:self-center">
+        <div className="col-start-2 flex items-center justify-end gap-2 self-center sm:col-start-3 sm:row-span-2 lg:row-start-2 lg:row-span-1 lg:self-start xl:self-center">
           <SearchBox isScrolled={isScrolled} className="hidden lg:block" />
 
           <button
@@ -455,12 +455,12 @@ export default function Navbar() {
             className="fixed inset-0 z-[100] bg-black/60 backdrop-blur-sm xl:hidden"
           />
 
-          <div className="fixed right-0 top-0 z-[110] flex h-full w-[85%] max-w-[400px] flex-col bg-white shadow-2xl xl:hidden">
-            <div className="flex items-center justify-between border-b p-6">
+          <div className="fixed right-0 top-0 z-[110] flex h-dvh w-[min(92vw,400px)] flex-col bg-white shadow-2xl xl:hidden">
+            <div className="flex items-center justify-between border-b p-4 sm:p-6">
               <Link
                 href="/"
                 onClick={() => setMobileMenuOpen(false)}
-                className="relative block h-20 w-40"
+                className="relative block h-16 w-36 sm:h-20 sm:w-40"
               >
                 <Image
                   src="/window-king-logo.png"
@@ -480,7 +480,7 @@ export default function Navbar() {
               </button>
             </div>
 
-            <div className="flex-1 space-y-6 overflow-y-auto p-6">
+            <div className="flex-1 space-y-5 overflow-y-auto p-4 sm:space-y-6 sm:p-6">
               <SearchBox
                 isScrolled
                 onNavigate={() => setMobileMenuOpen(false)}
@@ -498,19 +498,31 @@ export default function Navbar() {
                   About Window King
                 </p>
                 <MobileNavLink
-                  href="/about#profile"
+                  href="/about/profile"
                   label="Company Profile"
                   onClick={() => setMobileMenuOpen(false)}
                   sub
                 />
                 <MobileNavLink
-                  href="/about#awards"
-                  label="Awards"
+                  href="/about/factsheet"
+                  label="Corporate Factsheet"
                   onClick={() => setMobileMenuOpen(false)}
                   sub
                 />
                 <MobileNavLink
-                  href="/about#mentor"
+                  href="/about/infrastructure"
+                  label="Infrastructure"
+                  onClick={() => setMobileMenuOpen(false)}
+                  sub
+                />
+                <MobileNavLink
+                  href="/about/team"
+                  label="Team of Experts"
+                  onClick={() => setMobileMenuOpen(false)}
+                  sub
+                />
+                <MobileNavLink
+                  href="/about/mentor"
                   label="Our Mentor"
                   onClick={() => setMobileMenuOpen(false)}
                   sub
@@ -578,7 +590,7 @@ export default function Navbar() {
               />
             </div>
 
-            <div className="border-t bg-gray-50 p-6">
+            <div className="border-t bg-gray-50 p-4 sm:p-6">
               <a
                 href="tel:+917065500903"
                 className="flex items-center justify-center gap-3 rounded-xl bg-[#362A71] py-4 font-bold text-white transition-all hover:bg-[#F85A21]"
@@ -726,8 +738,8 @@ function MobileNavLink({
       className={cn(
         "group flex items-center justify-between py-1",
         sub
-          ? "text-lg font-semibold text-[#362A71]/80"
-          : "text-2xl font-black uppercase tracking-tighter text-[#362A71]"
+          ? "text-base font-semibold text-[#362A71]/80 sm:text-lg"
+          : "text-xl font-black uppercase text-[#362A71] sm:text-2xl"
       )}
     >
       {label}

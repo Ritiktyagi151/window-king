@@ -54,10 +54,10 @@ export default function ProductDetailPage({
             <ArrowLeft size={18} />
             Back To {material} Products
           </Link>
-          <p className="mt-8 text-xs font-black uppercase tracking-[0.3em] text-[#F85A21]">
+          <p className="mt-8 text-xs font-black uppercase tracking-[0.18em] text-[#F85A21] sm:tracking-[0.3em]">
             {material} {typeLabel}
           </p>
-          <h1 className="mt-4 text-4xl font-black uppercase leading-tight text-[#362A71] sm:text-5xl md:text-6xl">
+          <h1 className="mt-4 text-3xl font-black uppercase leading-tight text-[#362A71] sm:text-5xl md:text-6xl">
             {product.title}
           </h1>
           <p className="mt-6 max-w-2xl text-base leading-8 text-gray-600 md:text-lg">
@@ -90,7 +90,7 @@ export default function ProductDetailPage({
           </Link>
         </div>
 
-        <div className="relative min-h-[380px] overflow-hidden rounded-2xl bg-white shadow-2xl md:min-h-[560px]">
+        <div className="relative min-h-[300px] overflow-hidden rounded-2xl bg-white shadow-2xl sm:min-h-[380px] md:min-h-[560px]">
           <Image
             src={productImage}
             alt={product.title}
@@ -100,11 +100,11 @@ export default function ProductDetailPage({
             className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#362A71]/70 via-transparent to-transparent" />
-          <div className="absolute bottom-5 left-5 right-5 rounded-xl bg-white/90 p-5 shadow-xl backdrop-blur-md">
-            <p className="text-xs font-black uppercase tracking-[0.25em] text-[#F85A21]">
+          <div className="absolute bottom-4 left-4 right-4 rounded-xl bg-white/90 p-4 shadow-xl backdrop-blur-md sm:bottom-5 sm:left-5 sm:right-5 sm:p-5">
+            <p className="text-xs font-black uppercase tracking-[0.16em] text-[#F85A21] sm:tracking-[0.25em]">
               {categoryContent.title}
             </p>
-            <p className="mt-2 text-xl font-black uppercase text-[#362A71]">
+            <p className="mt-2 text-lg font-black uppercase text-[#362A71] sm:text-xl">
               {typeLabel}
             </p>
           </div>
@@ -113,10 +113,10 @@ export default function ProductDetailPage({
 
       <section className="mx-auto grid max-w-7xl gap-8 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="rounded-2xl bg-white p-6 shadow-sm md:p-8">
-          <p className="text-xs font-black uppercase tracking-[0.25em] text-[#F85A21]">
+          <p className="text-xs font-black uppercase tracking-[0.16em] text-[#F85A21] sm:tracking-[0.25em]">
             Product Description
           </p>
-          <h2 className="mt-3 text-3xl font-black uppercase text-[#362A71]">
+          <h2 className="mt-3 text-2xl font-black uppercase text-[#362A71] sm:text-3xl">
             About This {typeLabel}
           </h2>
           <p className="mt-4 text-base leading-8 text-gray-600">
@@ -145,7 +145,7 @@ export default function ProductDetailPage({
         </div>
 
         <div className="rounded-2xl bg-[#362A71] p-6 text-white shadow-xl md:p-8">
-          <p className="text-xs font-black uppercase tracking-[0.25em] text-[#F85A21]">
+          <p className="text-xs font-black uppercase tracking-[0.16em] text-[#F85A21] sm:tracking-[0.25em]">
             Common Uses
           </p>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
@@ -173,10 +173,10 @@ export default function ProductDetailPage({
 
       <section className="mx-auto mt-12 max-w-7xl px-4 sm:px-6 md:mt-16">
         <div className="mb-7">
-          <p className="text-xs font-black uppercase tracking-[0.25em] text-[#F85A21]">
+          <p className="text-xs font-black uppercase tracking-[0.16em] text-[#F85A21] sm:tracking-[0.25em]">
             System Diagram
           </p>
-          <h2 className="mt-2 text-3xl font-black uppercase text-[#362A71]">
+          <h2 className="mt-2 text-2xl font-black uppercase text-[#362A71] sm:text-3xl">
             How The System Works
           </h2>
         </div>
@@ -219,10 +219,10 @@ export default function ProductDetailPage({
 
       <section className="mx-auto mt-12 max-w-7xl px-4 sm:px-6 md:mt-16">
         <div className="mb-7">
-          <p className="text-xs font-black uppercase tracking-[0.25em] text-[#F85A21]">
+          <p className="text-xs font-black uppercase tracking-[0.16em] text-[#F85A21] sm:tracking-[0.25em]">
             Product Images
           </p>
-          <h2 className="mt-2 text-3xl font-black uppercase text-[#362A71]">
+          <h2 className="mt-2 text-2xl font-black uppercase text-[#362A71] sm:text-3xl">
             Visual Reference
           </h2>
         </div>

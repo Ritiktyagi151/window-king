@@ -37,7 +37,7 @@ export default function InnovationSection() {
 
   return (
     <section className="flex w-full flex-col justify-center overflow-hidden bg-white pb-8">
-      <div className="max-w-7xl mx-auto px-6 w-full h-full flex flex-col">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 w-full h-full flex flex-col">
         
         {/* Header */}
         <div className="mb-8 flex shrink-0 flex-col items-start justify-between gap-4 md:flex-row md:items-end">
@@ -46,7 +46,7 @@ export default function InnovationSection() {
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-[#F85A21] font-bold tracking-[0.3em] uppercase text-xs md:text-sm">Engineered Excellence</span>
+            <span className="text-[#F85A21] font-bold tracking-[0.18em] uppercase text-xs md:text-sm md:tracking-[0.3em]">Engineered Excellence</span>
             <h2 className="mt-2 text-3xl font-black uppercase leading-tight text-[#362A71] sm:text-4xl md:text-5xl md:leading-none">
               Quality & <span className="text-gray-400">Innovations</span>
             </h2>
@@ -55,14 +55,14 @@ export default function InnovationSection() {
           <MotionLink
             href="/innovation"
             whileHover={{ scale: 1.05 }}
-            className="group flex w-full items-center justify-center gap-3 rounded-full bg-[#362A71] px-6 py-3 text-xs font-bold text-white transition-all hover:bg-[#F85A21] sm:w-auto md:px-8 md:text-sm"
+            className="group flex w-full items-center justify-center gap-3 rounded-full bg-[#362A71] px-5 py-3 text-xs font-bold text-white transition-all hover:bg-[#F85A21] sm:w-auto md:px-8 md:text-sm"
           >
             EXPLORE TECHNOLOGY <MoveRight size={18} className="group-hover:translate-x-2 transition-transform" />
           </MotionLink>
         </div>
 
         {/* Bento Grid - Box sizes are fixed regardless of image dimensions */}
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-4 md:grid-rows-[260px_260px] lg:grid-rows-[300px_300px]">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4 md:grid-rows-[260px_260px] lg:grid-rows-[300px_300px]">
           {innovations.map((item, index) => (
             <motion.div
               key={index}

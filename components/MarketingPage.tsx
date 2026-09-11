@@ -103,7 +103,7 @@ export default function MarketingPage({
       {!showProductGrid && (
       <section className="mx-auto grid max-w-7xl gap-8 px-4 py-12 sm:px-6 md:py-16 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
         <div>
-          <p className="text-xs font-black uppercase tracking-[0.3em] text-[#F85A21]">
+          <p className="text-xs font-black uppercase tracking-[0.18em] text-[#F85A21] sm:tracking-[0.3em]">
             {content.eyebrow}
           </p>
           <h2 className="mt-4 text-3xl font-black uppercase leading-tight text-[#362A71] sm:text-4xl md:text-5xl">
@@ -132,7 +132,7 @@ export default function MarketingPage({
           </div>
         </div>
 
-        <div className="relative min-h-[360px] overflow-hidden rounded-2xl shadow-2xl md:min-h-[500px]">
+        <div className="relative min-h-[280px] overflow-hidden rounded-2xl shadow-2xl sm:min-h-[360px] md:min-h-[500px]">
           <Image
             src={visuals.image}
             alt={content.title}
@@ -142,10 +142,10 @@ export default function MarketingPage({
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#362A71]/80 via-transparent to-transparent" />
           <div className="absolute bottom-5 left-5 right-5 rounded-xl border border-white/20 bg-white/90 p-5 shadow-xl backdrop-blur-md">
-            <p className="text-xs font-black uppercase tracking-[0.25em] text-[#F85A21]">
+            <p className="text-xs font-black uppercase tracking-[0.16em] text-[#F85A21] sm:tracking-[0.25em]">
               {visuals.badge}
             </p>
-            <p className="mt-2 text-xl font-black uppercase leading-tight text-[#362A71]">
+            <p className="mt-2 text-base font-black uppercase leading-tight text-[#362A71] sm:text-xl">
               {visuals.accent}
             </p>
           </div>
@@ -155,16 +155,16 @@ export default function MarketingPage({
 
       <section className="mx-auto max-w-7xl px-4 sm:px-6">
         <div
-          className={`grid grid-cols-2 gap-4 lg:grid-cols-4 ${
+          className={`grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4 ${
             showProductGrid ? "pt-10 md:pt-14" : ""
           }`}
         >
           {content.metrics.map((metric) => (
             <div
               key={metric.label}
-              className="rounded-xl border border-[#362A71]/10 bg-white p-5 shadow-sm"
+              className="rounded-xl border border-[#362A71]/10 bg-white p-4 shadow-sm sm:p-5"
             >
-              <p className="text-3xl font-black text-[#362A71]">
+              <p className="text-2xl font-black text-[#362A71] sm:text-3xl">
                 {metric.value}
               </p>
               <p className="mt-2 text-[10px] font-bold uppercase tracking-[0.18em] text-[#F85A21]">
@@ -195,7 +195,7 @@ export default function MarketingPage({
       ) : (
       <section className="mx-auto mt-12 grid max-w-7xl gap-8 px-4 sm:px-6 md:mt-16 lg:grid-cols-[0.9fr_1.1fr]">
         <div className="rounded-2xl bg-[#362A71] p-6 text-white shadow-xl md:p-10">
-          <p className="text-xs font-black uppercase tracking-[0.25em] text-[#F85A21] sm:tracking-[0.35em]">
+          <p className="text-xs font-black uppercase tracking-[0.16em] text-[#F85A21] sm:tracking-[0.35em]">
             Core Strengths
           </p>
           <div className="mt-8 space-y-5">
@@ -205,7 +205,7 @@ export default function MarketingPage({
               return (
               <div
                 key={pillar.title}
-                className="grid grid-cols-[44px_1fr] gap-4 border-b border-white/10 pb-5 last:border-b-0 last:pb-0"
+                className="grid grid-cols-[40px_minmax(0,1fr)] gap-3 border-b border-white/10 pb-5 last:border-b-0 last:pb-0 sm:grid-cols-[44px_minmax(0,1fr)] sm:gap-4"
               >
                 <div className="flex h-11 w-11 items-center justify-center rounded-xl bg-white/10 text-[#F85A21]">
                   <Icon size={22} />
@@ -228,7 +228,7 @@ export default function MarketingPage({
         </div>
 
         <div className="rounded-2xl border border-[#F85A21]/10 bg-white p-6 shadow-sm md:p-10">
-          <p className="text-xs font-black uppercase tracking-[0.25em] text-[#362A71] sm:tracking-[0.35em]">
+          <p className="text-xs font-black uppercase tracking-[0.16em] text-[#362A71] sm:tracking-[0.35em]">
             {showProductGrid ? "Product Grid" : "What You Can Expect"}
           </p>
           <div
@@ -295,7 +295,7 @@ function ProductGrid({
     <div>
       <div className="mb-6 flex items-end justify-between gap-4">
         <div>
-          <p className="text-xs font-black uppercase tracking-[0.25em] text-[#F85A21]">
+          <p className="text-xs font-black uppercase tracking-[0.16em] text-[#F85A21] sm:tracking-[0.25em]">
             Product Grid
           </p>
           <h2 className="mt-2 text-3xl font-black uppercase text-[#362A71]">

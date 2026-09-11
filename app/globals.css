@@ -14,6 +14,37 @@ body {
   overflow-x: hidden;
 }
 
+* {
+  box-sizing: border-box;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 15px;
+  }
+
+  body {
+    text-wrap: pretty;
+  }
+
+  section {
+    scroll-margin-top: 84px;
+  }
+
+  [class*="tracking-[0.3em]"],
+  [class*="tracking-[0.35em]"],
+  [class*="tracking-[1em]"] {
+    letter-spacing: 0.16em;
+  }
+}
+
 .footer-marquee-track {
   animation: footer-marquee 28s linear infinite;
 }

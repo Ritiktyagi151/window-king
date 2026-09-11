@@ -103,7 +103,7 @@ export default function NonHomeBanner() {
   }
 
   return (
-    <section className="relative isolate overflow-hidden bg-[#362A71] px-4 pb-16 pt-36 sm:px-6 sm:pt-40 md:pb-24">
+    <section className="relative isolate overflow-hidden bg-[#362A71] px-4 pb-12 pt-28 sm:px-6 sm:pt-40 md:pb-24">
       <Image
         src={content.image}
         alt={content.title}
@@ -121,13 +121,13 @@ export default function NonHomeBanner() {
           viewport={{ once: true, amount: 0.4 }}
           className="text-white"
         >
-          <p className="text-xs font-black uppercase tracking-[0.35em] text-[#F85A21]">
+          <p className="text-xs font-black uppercase tracking-[0.18em] text-[#F85A21] sm:tracking-[0.35em]">
             {content.eyebrow}
           </p>
-          <h1 className="mt-5 text-4xl font-black uppercase leading-none sm:text-5xl md:text-6xl">
+          <h1 className="mt-4 text-3xl font-black uppercase leading-tight sm:mt-5 sm:text-5xl sm:leading-none md:text-6xl">
             {content.title}
           </h1>
-          <p className="mt-6 max-w-2xl border-l-4 border-[#F85A21] pl-5 text-base font-medium leading-8 text-white/85 md:text-lg">
+          <p className="mt-5 max-w-2xl border-l-4 border-[#F85A21] pl-4 text-sm font-medium leading-7 text-white/85 sm:pl-5 md:text-lg md:leading-8">
             {content.description}
           </p>
         </motion.div>

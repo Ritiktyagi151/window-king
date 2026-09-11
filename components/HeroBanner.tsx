@@ -23,7 +23,7 @@ export default function HeroBanner() {
   }, []);
 
   return (
-    <section className="relative min-h-[620px] w-full overflow-hidden bg-black pt-24 sm:pt-28 md:h-screen md:min-h-0 md:pt-0">
+    <section className="relative min-h-[520px] w-full overflow-hidden bg-black pt-20 sm:min-h-[620px] sm:pt-28 md:h-screen md:min-h-0 md:pt-0">
       {slides.map((slide, index) => (
         <motion.div
           key={slide}
@@ -39,7 +39,7 @@ export default function HeroBanner() {
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
 
-      <div className="absolute bottom-10 left-0 right-0 z-10 px-6 sm:bottom-14">
+      <div className="absolute bottom-8 left-0 right-0 z-10 px-4 sm:bottom-14 sm:px-6">
         <div className="mx-auto flex max-w-7xl justify-center sm:justify-start">
           <VirtualShowroomTour />
         </div>

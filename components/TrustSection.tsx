@@ -50,10 +50,10 @@ export default function TrustSection() {
   }, [features]);
 
   return (
-    <section className="mb-12 flex w-full items-center overflow-hidden bg-[#fcfcfc]  md:mb-20 md:min-h-[80vh]">
-      <div className="max-w-7xl mx-auto px-6 md:px-12 w-full relative">
+    <section className="mb-10 flex w-full items-center overflow-hidden bg-[#fcfcfc] py-8 md:mb-20 md:min-h-[80vh] md:py-0">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full relative">
         
-        <div className="flex flex-col lg:flex-row items-center justify-center gap-12 lg:gap-8 relative z-10">
+        <div className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-8 relative z-10">
           
           {/* Left Side: Image Layer */}
           <motion.div 
@@ -63,10 +63,10 @@ export default function TrustSection() {
             transition={{ duration: 0.8 }}
             viewport={{ once: false, amount: 0.3 }}
           >
-            <div className="relative w-full max-w-[500px] rounded-2xl border border-gray-100 bg-white p-5 shadow-xl md:rounded-[3rem] md:p-12">
+            <div className="relative w-full max-w-[500px] rounded-2xl border border-gray-100 bg-white p-4 shadow-xl sm:p-5 md:rounded-[3rem] md:p-12">
               
               {/* Dynamic Image with Animation */}
-              <div className="relative h-[250px] md:h-[350px] w-full">
+              <div className="relative h-[220px] w-full sm:h-[250px] md:h-[350px]">
                 <AnimatePresence mode="wait">
                   <motion.img 
                     key={activeImage}
@@ -101,7 +101,7 @@ export default function TrustSection() {
 
           {/* Right Side: Interactive List */}
           <motion.div 
-            className="z-10 flex w-full flex-col justify-center rounded-2xl border border-gray-100 bg-white p-6 shadow-2xl md:rounded-[2.5rem] lg:w-1/2"
+            className="z-10 flex w-full flex-col justify-center rounded-2xl border border-gray-100 bg-white p-5 shadow-2xl sm:p-6 md:rounded-[2.5rem] lg:w-1/2"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
@@ -113,7 +113,7 @@ export default function TrustSection() {
             
             <h2 className="mb-6 flex flex-wrap items-center gap-x-3 text-3xl font-black leading-tight text-[#362A71] sm:text-4xl md:text-5xl">
               Safety 
-              <span className="text-gray-400 font-light italic text-2xl md:text-3xl">Worth Your Trust</span>
+              <span className="text-2xl font-light italic text-gray-400 sm:text-3xl md:text-3xl">Worth Your Trust</span>
             </h2>
 
             <div className="grid grid-cols-1 gap-2 mb-4">
